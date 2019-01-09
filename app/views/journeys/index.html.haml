@@ -12,7 +12,7 @@
         - @questions.each do |k, q|
           .govuk-radios__item
             = f.radio_button :category, k, 'aria-describedby' => "#{k}-item-hint", class: 'govuk-radios__input'
-            %label.govuk-label.govuk-radios__label.govuk-label--s{for: k}= q['title']
+            %label.govuk-label.govuk-radios__label.govuk-label--s{for: "response_category_#{k}"}= q['title']
             %span.govuk-hint.govuk-radios__hint{id: "#{k}-item-hint"}= q['hint']
                         
     %p

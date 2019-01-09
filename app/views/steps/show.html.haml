@@ -16,8 +16,8 @@
       .govuk-checkboxes
         - @answers.each do |a|
           .govuk-checkboxes__item
-            = check_box_tag "response[#{@name}][]", a['value'], @response.send(@name).include?(a['value']), class: 'govuk-checkboxes__input'
-            %label.govuk-label.govuk-checkboxes__label{for: a['value']}= a['title']
+            = check_box_tag "response[#{@name}][]", a['value'], @response.send(@name).include?(a['value']), id: "response_#{@name}_#{a['value']}", class: 'govuk-checkboxes__input'
+            %label.govuk-label.govuk-checkboxes__label{for: "response_#{@name}_#{a['value']}"}= a['title']
 
       %p
         = submit_tag 'Save and continue', class: 'govuk-button'
