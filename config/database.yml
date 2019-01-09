@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: essex_ocs_developement
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: essex_ocs_test
+  pool: 5

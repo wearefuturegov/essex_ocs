@@ -1,0 +1,7 @@
+{
+  "name": "essex_ocs",
+  "private": true,
+  "dependencies": {
+    "govuk-frontend": "^2.4.1"
+  }
+}

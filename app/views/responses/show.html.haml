@@ -1,0 +1,32 @@
+%h1.govuk-heading-xl
+  Your results
+
+%p.govuk-body-l
+  I've created a personalised list of suggestions for you.
+
+%p.govuk-body
+  You chose
+  
+  %ul.govuk-list.govuk-list--bullet
+    %li
+      %strong
+        Category
+      = @response.category
+    %li
+      %strong
+        Help Type
+      %ul.govuk-list
+        - @response.help_category.each do |r|
+          %li= r
+    %li
+      %strong
+        Info Type
+      %ul.govuk-list
+        - @response.info_type.each do |r|
+          %li= r
+    %li
+      %strong
+        Payment Options
+      %ul.govuk-list
+        - @response.payment_options.each do |r|
+          %li= r

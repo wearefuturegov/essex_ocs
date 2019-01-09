@@ -1,0 +1,144 @@
+staying_independent:
+  title: I want to make sure I can stay independent at home
+  hint: There are lots of things that you can do to make sure that you stay independent within your own home.
+  steps:
+    -
+      title: Can you choose the statements that apply to you?
+      hint: You can choose more than one
+      name: 'help_category'
+      answers:
+        - title: I want to avoid accidents at home
+          value: avoid_accidents
+        - title: I want to adapt my home to suit my needs
+          value: apapt_home
+        - title: I want to find some ways to keep fit and active
+          value: fit_active
+    -
+      title: What kind of information are you looking for?
+      hint: Again, you can choose more than one
+      name: info_type
+      answers:
+        - title: I want to see information and advice that I look at myself
+          value: myself
+        - title: I want to see some types of gadgets and equipment that can help me
+          value: equipment
+        - title: I want to see what type of professional help I could get with this
+          value: professional
+        - title: I want to see activities and groups in my local areas
+          value: activities_and_groups
+    -
+      title: What payment options are you interested in seeing?
+      hint: Again, you can choose more than one
+      name: payment_options
+      answers:
+        - title: I am happy to pay for things myself
+          value: pay_myself
+        - title: I'd like to see some options for help with payment
+          value: help_with_payment
+everyday_tasks:
+  title: I need some help with everyday tasks (like cleaning or shopping)
+  hint: Some hint text goes here
+  steps:
+    -
+      title: Can you choose the statements that apply to you?
+      hint: You can choose more than one
+      name: 'help_category'
+      answers:
+        - title: I'd like some help with personal care (like washing and dressing)
+          value: personal_care
+        - title: I'd like some help with meals and shopping
+          value: meals_shopping
+        - title: I'd like some help with cleaning, housework and home repairs
+          value: housework
+    -
+      title: What kind of information are you looking for?
+      hint: Again, you can choose more than one
+      name: info_type
+      answers:
+        - title: I want to see information and advice that I look at myself
+          value: myself
+        - title: I want to see some types of gadgets and equipment that can help me
+          value: equipment
+        - title: I want to see what type of professional help I could get with this
+          value: professional
+        - title: I want to see activities and groups in my local areas
+          value: activities_and_groups
+    -
+      title: What payment options are you interested in seeing?
+      hint: Again, you can choose more than one
+      name: payment_options
+      answers:
+        - title: I am happy to pay for things myself
+          value: pay_myself
+        - title: I'd like to see some options for help with payment
+          value: help_with_payment
+out_and_about:
+  title: I want to get out and about easier
+  hint: Some hint text goes here
+  steps:
+    -
+      title: Can you choose the statements that apply to you?
+      hint: You can choose more than one
+      name: 'help_category'
+      answers:
+        - title: I want to know more about wheelchairs and mobility aids
+          value: mobility_aids
+        - title: I want to know more about transportation services
+          value: transportation
+    -
+      title: What kind of information are you looking for?
+      hint: Again, you can choose more than one
+      name: info_type
+      answers:
+        - title: I want to see information and advice that I look at myself
+          value: myself
+        - title: I want to see some types of gadgets and equipment that can help me
+          value: equipment
+        - title: I want to see what type of professional help I could get with this
+          value: professional
+        - title: I want to see activities and groups in my local areas
+          value: activities_and_groups
+    -
+      title: What payment options are you interested in seeing?
+      hint: Again, you can choose more than one
+      name: payment_options
+      answers:
+        - title: I am happy to pay for things myself
+          value: pay_myself
+        - title: I'd like to see some options for help with payment
+          value: help_with_payment
+fitness:
+  title: I want to keep physically and mentally fit
+  hint: Some hint text goes here
+  steps:
+    -
+      title: Can you choose the statements that apply to you?
+      hint: You can choose more than one
+      name: 'help_category'
+      answers:
+        - title: I want to find some ways to keep fit and active
+          value: fit_active
+        - title: I want to socialise more and keep mentally fit
+          value: socialise
+    -
+      title: What kind of information are you looking for?
+      hint: Again, you can choose more than one
+      name: info_type
+      answers:
+        - title: I want to see information and advice that I look at myself
+          value: myself
+        - title: I want to see some types of gadgets and equipment that can help me
+          value: equipment
+        - title: I want to see what type of professional help I could get with this
+          value: professional
+        - title: I want to see activities and groups in my local areas
+          value: activities_and_groups
+    -
+      title: What payment options are you interested in seeing?
+      hint: Again, you can choose more than one
+      name: payment_options
+      answers:
+        - title: I am happy to pay for things myself
+          value: pay_myself
+        - title: I'd like to see some options for help with payment
+          value: help_with_payment    
