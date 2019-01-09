@@ -3,6 +3,7 @@ class StepsController < ApplicationController
 
   def show
     @next_step = next_step
+    @previous_step = previous_step
   end
 
   protected
@@ -22,5 +23,10 @@ class StepsController < ApplicationController
   def next_step
     next_step = params[:id].to_i + 1
     next_step if journey['steps'].count >= next_step
+  end
+
+  def previous_step
+    previous_step = params[:id].to_i - 1
+    previous_step if previous_step.positive?
   end
 end
