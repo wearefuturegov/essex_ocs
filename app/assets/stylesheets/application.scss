@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
-$govuk-assets-path: './node_modules/govuk-frontend/assets';
+ 
+$govuk-images-path: "/assets/";
+$govuk-fonts-path: "/assets/";
+$govuk-font-url-function: "font-url";
+$govuk-image-url-function: "image-url";
 
 @import "govuk-frontend/all";
