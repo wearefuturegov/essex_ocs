@@ -15,7 +15,7 @@ to help older people in Essex who are due to leave hospital.
 ### Clone the repo
 
 ```
-git clone https://github.com/wearefuturegov/hackney-fostering.git
+git clone https://github.com/wearefuturegov/essex_ocs.git
 ```
 
 ### Install dependencies
