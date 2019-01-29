@@ -1,5 +1,5 @@
 %span.govuk-caption-xl
-  Leaving Hospital - Virtual Advisor
+  We’ll ask you five quick questions that’ll help us find the information you need. First things first - step 1 of 4...
   
 = form_for @response do |f|
 
@@ -7,7 +7,7 @@
     %fieldset.govuk-fieldset{"aria-describedby" => "sign-in-hint"}
       %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
         %h1.govuk-fieldset__heading
-          What type of statement applies to you (or someone you know)?
+          Can you pick a statement that best describes what you need?
       .govuk-radios
         - @questions.each do |k, q|
           .govuk-radios__item
