@@ -3,7 +3,18 @@
 
 %p.govuk-body-l
   - @response.help_category.each do |help_category|
-    = @results[help_category]["consistent_text"]
+    - @results[help_category]["consistent_text"].each do | section|
+      - if section["type"] == "paragraph"
+        %p.govuk-body-l
+          = section["content"]
+      - elsif section["type"] == "bullets"
+        %ul.gov-body
+          - section["content"].each do |bullet_point|
+            %li.govuk-body-l
+              = bullet_point
+      - elsif section["type"] == "subheading"
+        %p.govuk-heading-l
+          = section["content"]
 
 %p.govuk-body
   - @response.help_category.each do |help_category|
@@ -11,18 +22,20 @@
       - @results[help_category][info_type].each do |section|
         - if section["type"] == "paragraph"
           %p.govuk-body
+            - section["components"].each do |component|
+              - if component["type"] == "text"
+                = component["content"]
+              - elsif component["type"] == "hyperlink"
+                = link_to component["label"], component["url"], target: :_blank, class: "govuk-link govuk-body"
             = section["content"]
-        - elsif section["type"] == "link"
-          %p.govuk-body
-            - if section["label"]
-              = link_to section["label"], section["url"], class: "govuk-link govuk-body"
-            -else
-              = link_to section["url"], section["url"], target: :_blank, class: "govuk-link govuk-body"
         - elsif section["type"] == "bullets"
           %ul.gov-body
             - section["content"].each do |bullet_point|
               %li.govuk-body
                 = bullet_point
+        - elsif section["type"] == "subheading"
+          %p.govuk-heading-m
+            = section["content"]
 
 
   
