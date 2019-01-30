@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def results
-    @results ||= YAML.safe_load(File.read(Rails.root.join('config', 'results.yml')))
+    @results ||= YAML.safe_load(File.read(Rails.root.join('config', 'results.yml')), [], [], true)
   end
 
   def get_response
