@@ -26,15 +26,6 @@ staying_independent:
           value: professional
         - title: I want to see activities and groups in my local areas
           value: activities_and_groups
-    -
-      title: What payment options are you interested in seeing?
-      hint: Again, you can choose more than one
-      name: payment_options
-      answers:
-        - title: I am happy to pay for things myself
-          value: pay_myself
-        - title: I'd like to see some options for help with payment
-          value: help_with_payment
 everyday_tasks:
   title: I need some help with everyday tasks (like cleaning or shopping)
   hint: Information, equipment and services to help you every day
@@ -63,15 +54,6 @@ everyday_tasks:
           value: professional
         - title: I want to see activities and groups in my local areas
           value: activities_and_groups
-    -
-      title: What payment options are you interested in seeing?
-      hint: Again, you can choose more than one
-      name: payment_options
-      answers:
-        - title: I am happy to pay for things myself
-          value: pay_myself
-        - title: I'd like to see some options for help with payment
-          value: help_with_payment
 out_and_about:
   title: I want to get out and about easier
   hint: From mobility aids to transportation - how to keep mobile
@@ -124,12 +106,3 @@ fitness:
           value: professional
         - title: I want to see activities and groups in my local areas
           value: activities_and_groups
-    -
-      title: What payment options are you interested in seeing?
-      hint: Again, you can choose more than one
-      name: payment_options
-      answers:
-        - title: I am happy to pay for things myself
-          value: pay_myself
-        - title: I'd like to see some options for help with payment
-          value: help_with_payment    
