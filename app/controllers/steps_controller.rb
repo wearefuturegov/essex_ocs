@@ -4,6 +4,8 @@ class StepsController < ApplicationController
   def show
     @next_step = next_step
     @previous_step = previous_step
+    @current_step = params[:id].to_i + 1
+    @step_count = journey['steps'].count + 2
   end
 
   protected

@@ -4,7 +4,7 @@
   = link_to 'Back', journeys_path, class: 'govuk-back-link'
 
 %span.govuk-caption-xl
-  Leaving Hospital - Virtual Advisor
+  = "Step #{@current_step} of #{@step_count}"
 
 = form_for @response do |f|
   = hidden_field_tag :next_step, @next_step
