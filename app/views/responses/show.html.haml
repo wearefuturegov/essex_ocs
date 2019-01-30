@@ -17,7 +17,7 @@
             - if section["label"]
               = link_to section["label"], section["url"], class: "govuk-link govuk-body"
             -else
-              = link_to section["url"], class: "govuk-link govuk-body"
+              = link_to section["url"], section["url"], class: "govuk-link govuk-body"
         - elsif section["type"] == "bullets"
           %ul.gov-body
             - section["content"].each do |bullet_point|
