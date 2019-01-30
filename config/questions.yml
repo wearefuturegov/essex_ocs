@@ -10,7 +10,7 @@ staying_independent:
         - title: I want to avoid accidents at home
           value: avoid_accidents
         - title: I want to adapt my home to suit my needs
-          value: apapt_home
+          value: adapt_home
         - title: I want to find out about technology for independent living (like alarms and sensors)
           value: tech
     -
