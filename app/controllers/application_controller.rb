@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
     @questions ||= YAML.safe_load(File.read(Rails.root.join('config', 'questions.yml')))
   end
 
+  def results
+    @results ||= YAML.safe_load(File.read(Rails.root.join('config', 'results.yml')))
+  end
+
   def get_response
     @response ||= Response.find(session[:response_id])
   end

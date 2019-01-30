@@ -13,11 +13,14 @@ class ResponsesController < ApplicationController
     if params[:next_step].present?
       redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
     else
+      @results = results
       render :show
     end
   end
 
-  def show; end
+  def show
+    @results = results
+  end
 
   private
 

@@ -2,31 +2,27 @@
   Your results
 
 %p.govuk-body-l
-  I've created a personalised list of suggestions for you.
+  - @response.help_category.each do |help_category|
+    = @results[help_category]["consistent_text"]
 
 %p.govuk-body
-  You chose
+  - @response.help_category.each do |help_category|
+    - @response.info_type.each do |info_type|
+      - @results[help_category][info_type].each do |section|
+        - if section["type"] == "paragraph"
+          %p.govuk-body
+            = section["content"]
+        - elsif section["type"] == "link"
+          %p.govuk-body
+            - if section["label"]
+              = link_to section["label"], section["url"], class: "govuk-link govuk-body"
+            -else
+              = link_to section["url"], class: "govuk-link govuk-body"
+        - elsif section["type"] == "bullets"
+          %ul.gov-body
+            - section["content"].each do |bullet_point|
+              %li.govuk-body
+                = bullet_point
+
+
   
-  %ul.govuk-list.govuk-list--bullet
-    %li
-      %strong
-        Category
-      = @response.category
-    %li
-      %strong
-        Help Type
-      %ul.govuk-list
-        - @response.help_category.each do |r|
-          %li= r
-    %li
-      %strong
-        Info Type
-      %ul.govuk-list
-        - @response.info_type.each do |r|
-          %li= r
-    %li
-      %strong
-        Payment Options
-      %ul.govuk-list
-        - @response.payment_options.each do |r|
-          %li= r

@@ -1,0 +1,18 @@
+avoid_accidents: # help_category
+  consistent_text: "There are lots of ways to prevent accidents in your home - from quick and easy fall prevention and exercises, to equipment to help with everyday living."
+  myself: # info_type
+    - type: paragraph
+      content: "There are some quick and easy ways to prevent falls at home:"
+    - type: bullets
+      content:
+        - remove clutter, trailing wires and frayed carpet
+        - use non-slip mats and rugs
+        - use high-wattage light bulbs in lamps and torches, so you can see clearly
+        - organise your home so that climbing, stretching and bending are kept to a minimum, and to avoid bumping into things
+        - try not to walk on slippery floors in socks or tights
+        - wear well-fitting shoes that are in good condition and support the ankle.
+        - takie care of your feet by trimming your toenails regularly and seeing a GP or chiropodist about any foot problems
+    - type: paragraph
+      content: "NHS Choices has more information on how to prevent accidents in your home:"
+    - type: link
+      url: "https://www.nhs.uk/conditions/falls/prevention/"
