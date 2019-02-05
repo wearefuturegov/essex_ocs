@@ -14,12 +14,14 @@ class ResponsesController < ApplicationController
       redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
     else
       @results = results
+      @info_types = @response.info_type
       render :show
     end
   end
 
   def show
     @results = results
+    @info_types = @response.info_type
   end
 
   private
