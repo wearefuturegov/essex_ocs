@@ -1,218 +1,247 @@
+# Independence
+
 avoid_accidents: # help_category
+  title: Avoid accidents at home
   consistent_text:
     - type: paragraph
       content: "There are lots of ways to prevent accidents in your home - from quick and easy fall prevention and exercises, to equipment to help with everyday living."
 
   myself: # info_type - Advice and Info
-    - type: paragraph # section
-      components: # each paragraph is made up of components - this allows for hyperlinks to be inserted in the middle of a block of text
-        - type: text
-          content: "There are some quick and easy ways to prevent falls at home:"
+    title: information that you can look at yourself
+    sections:
+      - type: paragraph # section
+        components: # each paragraph is made up of components - this allows for hyperlinks to be inserted in the middle of a block of text
+          - type: text
+            content: "There are some quick and easy ways to prevent falls at home:"
 
-    - type: bullets
-      content:
-        - remove clutter, trailing wires and frayed carpet
-        - use non-slip mats and rugs
-        - use high-wattage light bulbs in lamps and torches, so you can see clearly
-        - organise your home so that climbing, stretching and bending are kept to a minimum, and to avoid bumping into things
-        - try not to walk on slippery floors in socks or tights
-        - wear well-fitting shoes that are in good condition and support the ankle.
-        - take care of your feet by trimming your toenails regularly and seeing a GP or chiropodist about any foot problems
+      - type: bullets
+        content:
+          - remove clutter, trailing wires and frayed carpet
+          - use non-slip mats and rugs
+          - use high-wattage light bulbs in lamps and torches, so you can see clearly
+          - organise your home so that climbing, stretching and bending are kept to a minimum, and to avoid bumping into things
+          - try not to walk on slippery floors in socks or tights
+          - wear well-fitting shoes that are in good condition and support the ankle.
+          - take care of your feet by trimming your toenails regularly and seeing a GP or chiropodist about any foot problems
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.nhs.uk/conditions/falls/prevention
-          label: NHS Choices
-        - type: text
-          content: "has more information on how to prevent accidents in your home:"
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.nhs.uk/conditions/falls/prevention
+            label: NHS Choices
+          - type: text
+            content: "has more information on how to prevent accidents in your home:"
 
-    - type: subheading
-      content: Excercises
+      - type: subheading
+        content: Exercises
 
-    - type: paragraph
-      components:
-        - type: text
-          content: There are lots of simple exercises that you can do in your own home to improve your strength and mobility.
+      - type: paragraph
+        components:
+          - type: text
+            content: There are lots of simple exercises that you can do in your own home to improve your strength and mobility.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.nhs.uk/live-well/exercise/balance-exercises
-          label: Try these exercises to improve your balance.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.nhs.uk/live-well/exercise/balance-exercises
+            label: Try these exercises to improve your balance.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.nhs.uk/live-well/exercise/strength-exercises
-          label: Combine them with these exercises to improve strength.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.nhs.uk/live-well/exercise/strength-exercises
+            label: Combine them with these exercises to improve strength.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.nhs.uk/live-well/exercise/flexibility-exercises
-          label: And these to improve flexibility.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.nhs.uk/live-well/exercise/flexibility-exercises
+            label: And these to improve flexibility.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.nhs.uk/live-well/exercise/sitting-exercises
-          label: And there's some exercises you can even do sitting down.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.nhs.uk/live-well/exercise/sitting-exercises
+            label: And there's some exercises you can even do sitting down.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: And there are a full list of exercises that you can do to
-        - type: hyperlink
-          url: https://www.nhs.uk/live-well/exercise
-          label: keep yourself fit and independent.
+      - type: paragraph
+        components:
+          - type: text
+            content: And there are a full list of exercises that you can do to
+          - type: hyperlink
+            url: https://www.nhs.uk/live-well/exercise
+            label: keep yourself fit and independent.
 
 
   equipment:
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://asksara.dlf.org.uk/?auth=sara5
-          label: The Disabled Living Foundation's Ask SARA tool
-        - type: text
-          content: gives advice on equipment and where to get them.
+    title: gadgets and equipment
+    sections:
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://asksara.dlf.org.uk/?auth=sara5
+            label: The Disabled Living Foundation's Ask SARA tool
+          - type: text
+            content: gives advice on equipment and where to get them.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.ecl.org/
-          label: Essex Cares Ltd (ECL)
-        - type: text
-          content: provides sensory and equipment services on behalf of Essex County Council
-        - type: text
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.ecl.org/
+            label: Essex Cares Ltd (ECL)
+          - type: text
+            content: provides sensory and equipment services on behalf of Essex County Council
+          - type: text
 
-    - type: paragraph
-      components:
-        - type: text
-          content: You might be eligible for a
-        - type: hyperlink
-          url: https://www.gov.uk/disabled-facilities-grants
-          label: Disabled Facilities Grant
-        - type: text
-          content: from your local council if you are disabled and need equipment, or to make changes to your home. You will need an assessment by an occupational therapist to determine if you're eligible.
+      - type: paragraph
+        components:
+          - type: text
+            content: You might be eligible for a
+          - type: hyperlink
+            url: https://www.gov.uk/disabled-facilities-grants
+            label: Disabled Facilities Grant
+          - type: text
+            content: from your local council if you are disabled and need equipment, or to make changes to your home. You will need an assessment by an occupational therapist to determine if you're eligible.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: You might also be eligible for equipment from
-        - type: hyperlink
-          url: https://www.livingwellessex.org/at-home/staying-in-your-own-home/requesting-an-assessment/
-          label: Essex County Council.
-        - type: text
-          content: The help you get depends on the assessed level of difficulty you're having at home and the risk to your wellbeing.
+      - type: paragraph
+        components:
+          - type: text
+            content: You might also be eligible for equipment from
+          - type: hyperlink
+            url: https://www.livingwellessex.org/at-home/staying-in-your-own-home/requesting-an-assessment/
+            label: Essex County Council.
+          - type: text
+            content: The help you get depends on the assessed level of difficulty you're having at home and the risk to your wellbeing.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: Visit
-        - type: hyperlink
-          url: https://www.essex.gov.uk/Health-Social-Care/Health-and-social-care-for-adults/charging-for-care-services/Pages/Default.aspx
-          label: Essex County Council
-        - type: text
-          content: for information on using direct payments to buy equipment to meet your care and support needs.
+      - type: paragraph
+        components:
+          - type: text
+            content: Visit
+          - type: hyperlink
+            url: https://www.essex.gov.uk/Health-Social-Care/Health-and-social-care-for-adults/charging-for-care-services/Pages/Default.aspx
+            label: Essex County Council
+          - type: text
+            content: for information on using direct payments to buy equipment to meet your care and support needs.
 
   professional:
-    - type: paragraph
-      components:
-        - type: text
-          content: Physiotherapy can help you improve movement, flexibility, coordination and strength. This will help keep you stonger and active around the home.
-        - type: text
-          content: "After an assessment, a physiotherapist may offer:"
-    - type: bullets
-      content:
-        - A programme of exercises to help you to become stronger and to improve your walking
-        - Advice on how you might take a different, safer approach to your walking
-        - Advice on equipment and aids which might be suitable for you
-    - type: paragraph
-      components:
-        - type: text
-          content: Find physiotherapy services in your area
+    title: services
+    sections:
+      - type: paragraph
+        components:
+          - type: text
+            content: Physiotherapy can help you improve movement, flexibility, coordination and strength. This will help keep you stonger and active around the home.
+          - type: text
+            content: "After an assessment, a physiotherapist may offer:"
+      - type: bullets
+        content:
+          - A programme of exercises to help you to become stronger and to improve your walking
+          - Advice on how you might take a different, safer approach to your walking
+          - Advice on equipment and aids which might be suitable for you
+      - type: paragraph
+        components:
+          - type: text
+            content: Find physiotherapy services in your area
 
-    - type: paragraph
-      components:
-        - type: text
-          content: You might be referred to physiotherapist following a hospital stay, or after seeing a GP, district nurse or social worker.
+      - type: paragraph
+        components:
+          - type: text
+            content: You might be referred to physiotherapist following a hospital stay, or after seeing a GP, district nurse or social worker.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.ecl.org/
-          label: Find out about ECL (Essex Cares Ltd) physiotherapy services.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.ecl.org/
+            label: Find out about ECL (Essex Cares Ltd) physiotherapy services.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: "If you want to find private physiotherapists in your area, try:"
+      - type: paragraph
+        components:
+          - type: text
+            content: "If you want to find private physiotherapists in your area, try:"
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.csp.org.uk/
-          label: Chartered Society of Physiotherapy
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.csp.org.uk/
+            label: Chartered Society of Physiotherapy
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.physiofirst.org.uk/
-          label: Physio First
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.physiofirst.org.uk/
+            label: Physio First
 
-    - type: paragraph
-      components:
-        - type: text
-          content: If you think that you need some extra help to keep you independent at home, you can contact
-        - type: hyperlink
-          url: https://www.essex.gov.uk/Health-Social-Care/Pages/Health-and-Social-Care.aspx
-          label: Essex County Council Adult Social Care
-        - type: text
-          content: for an assessment of your needs.
+      - type: paragraph
+        components:
+          - type: text
+            content: If you think that you need some extra help to keep you independent at home, you can contact
+          - type: hyperlink
+            url: https://www.essex.gov.uk/Health-Social-Care/Pages/Health-and-Social-Care.aspx
+            label: Essex County Council Adult Social Care
+          - type: text
+            content: for an assessment of your needs.
 
   activities_and_groups:
-    - type: paragraph
-      components:
-        - type: text
-          content: Community 360 provides a range of services to Colchester residents, including a
-        - type: hyperlink
-          url: https://www.community360.org.uk/slipper-exchange
-          label: Slipper Exchange programme
-        - type: text
-          content: to swap old slippers for new
-    - type: paragraph
-      components:
-        - type: text
-          content: Age UK runs a
-        - type: hyperlink
-          url: https://www.ageuk.org.uk/essex/our-services/footcare
-          label: toenail cutting service in Colchester
-        - type: text
-          content: to help to keep comfortable and safe.
+    title: local activities and organisations
+    sections:
+      - type: paragraph
+        components:
+          - type: text
+            content: Community 360 provides a range of services to Colchester residents, including a
+          - type: hyperlink
+            url: https://www.community360.org.uk/slipper-exchange
+            label: Slipper Exchange programme
+          - type: text
+            content: to swap old slippers for new
+      - type: paragraph
+        components:
+          - type: text
+            content: Age UK runs a
+          - type: hyperlink
+            url: https://www.ageuk.org.uk/essex/our-services/footcare
+            label: toenail cutting service in Colchester
+          - type: text
+            content: to help to keep comfortable and safe.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: Keeping generally fit and active will help you keep independent and less prone to accidents at home.
+      - type: paragraph
+        components:
+          - type: text
+            content: Keeping generally fit and active will help you keep independent and less prone to accidents at home.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://connectwellessex.org.uk
-          label: Connect Well Essex
-        - type: text
-          content: can help you find activities on your local area.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://connectwellessex.org.uk
+            label: Connect Well Essex
+          - type: text
+            content: can help you find activities on your local area.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://colchesterleisureworld.co.uk
-          label: Colchester Leisure World
-        - type: text
-          content: has a range of activities to help keep you strong and healthy.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://colchesterleisureworld.co.uk
+            label: Colchester Leisure World
+          - type: text
+            content: has a range of activities to help keep you strong and healthy.
 
+  more_help:
+    sections:
+      - type: paragraph
+        components:
+          - type: text
+            content: Anyone registered with a GP in North East Essex and aged 65 years or over may be referred to a Falls Prevention Service if they are thought to be at risk of falling. Alternatively, you might be refered to a Falls Prevention Clinic. Please speak to your GP or health professional to find out if you are
+          - type: text
+
+      - type: paragraph
+        components:
+          - type: text
+            content: If you think that you need some extra help to keep you independent at home, you can contact
+          - type: hyperlink
+            url: https://www.essex.gov.uk/Health-Social-Care/Pages/Health-and-Social-Care.aspx
+            label: Essex County Council Adult Social Care
+          - type: text
+            content: for an assessment of your needs.
 adapt_home:
+  title: Adapt your home
   consistent_text:
     - type: paragraph
       content: You can make changes to your home to help manage everyday tasks and stay independent. You'll probably need some advice from a trained health or social care professional, like an occupational therapist, equipment providers or qualified builders and tradespeople. If you live in rented property you will need to seek your landlord's permission before you make any changes.
@@ -239,6 +268,8 @@ adapt_home:
         - adapting kitchens
 
   myself:
+    title: information you can look at yourself
+    sections:
     - type: paragraph
       components:
         - type: hyperlink
@@ -248,184 +279,289 @@ adapt_home:
           content: gives advice on types of home adaptations to help make your home life easier.
 
   equipment: &adapt_home_equipment
-    - type: paragraph
-      components:
-        - type: text
-          content: You can choose to make the changes yourself, and buy products and services online.
+    title: gadgets and equipment
+    sections:
+      - type: paragraph
+        components:
+          - type: text
+            content: You can choose to make the changes yourself, and buy products and services online.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.dlf.org.uk
-          label: The Disabled Living Foundation
-        - type: text
-          content: gives information, advice and a list of suppliers to help you choose.
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.dlf.org.uk
+            label: The Disabled Living Foundation
+          - type: text
+            content: gives information, advice and a list of suppliers to help you choose.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: "Find tradespeople near you:"
+      - type: paragraph
+        components:
+          - type: text
+            content: "Find tradespeople near you:"
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.buywithconfidence.gov.uk
-          label: Buy with confidence approved trader scheme
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.buywithconfidence.gov.uk
+            label: Buy with confidence approved trader scheme
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.ratedpeople.com
-          label: Rated people
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.ratedpeople.com
+            label: Rated people
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.trustatrader.com
-          label: Trust a trader
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.trustatrader.com
+            label: Trust a trader
 
-    - type: paragraph
-      components:
-        - type: text
-          content: If you'd like advice from a private occupational therapist on the types of equipment you might need, you can find one at the
-        - type: hyperlink
-          url: https://rcotss-ip.org.uk/find
-          label: Royal College of Occupational Therapists website.
+      - type: paragraph
+        components:
+          - type: text
+            content: If you'd like advice from a private occupational therapist on the types of equipment you might need, you can find one at the
+          - type: hyperlink
+            url: https://rcotss-ip.org.uk/find
+            label: Royal College of Occupational Therapists website.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: You could get support for minor adaptations costing up to £1000. You can ask
-        - type: hyperlink
-          url: https://www.livingwellessex.org/at-home/staying-in-your-own-home/requesting-an-assessment
-          label: Essex County Council Adult Social Care
-        - type: text
-          content: to carry out an assessment to see if minor adaptations will help you manage everyday tasks at home.
+      - type: paragraph
+        components:
+          - type: text
+            content: You could get support for minor adaptations costing up to £1000. You can ask
+          - type: hyperlink
+            url: https://www.livingwellessex.org/at-home/staying-in-your-own-home/requesting-an-assessment
+            label: Essex County Council Adult Social Care
+          - type: text
+            content: to carry out an assessment to see if minor adaptations will help you manage everyday tasks at home.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: If you're disabled or have a long-term health condition and need to make changes to your home, you may be eligible for a
-        - type: hyperlink
-          url: https://www.gov.uk/disabled-facilities-grants
-          label: disabled facilities grant.
-        - type: text
-          content: You will need an assessment by an occupational therapist to see if you are eligible.
+      - type: paragraph
+        components:
+          - type: text
+            content: If you're disabled or have a long-term health condition and need to make changes to your home, you may be eligible for a
+          - type: hyperlink
+            url: https://www.gov.uk/disabled-facilities-grants
+            label: disabled facilities grant.
+          - type: text
+            content: You will need an assessment by an occupational therapist to see if you are eligible.
 
   professional:
     *adapt_home_equipment
 
+  activities_and_groups:
+    title: local activities and organisations
+    sections:
+      - type: paragraph
+        components:
+          - type: text
+            content: There may be a local Home Improvement Agency (HIA) in your area that can help you at home. These are not-for-profit organisations that help owner-occupiers or tenants of private rented accommodation who are older, disabled or on low incomes to repair, improve or adapt their homes.
+
+      - type: paragraph
+        components:
+          - type: text
+            content: They offer practical help with things like arranging a survey, getting estimates for work, or accessing financial help
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: http://www.findmyhia.org.uk
+            label: Find your local HIA here.
+
 tech:
+  title: Find out about technology for independent living
   consistent_text:
     - type: paragraph
       content: "If you are elderly, disabled or have an illness, technology can help you stay independent in your home and better connected with your community. There are alarms, sensors, monitors and detectors, that can be placed around your home or worn. They can keep you safe and help make life easier for you and those that care for you. "
 
   myself:
-    - type: subheading
-      content: Telecare, alarms, sensors and detectors
+    title: information that you can look at yourself
+    sections:
+      - type: subheading
+        content: Telecare, alarms, sensors and detectors
 
-    - type: paragraph
-      components:
-        - type: text
-          content: Alarms and sensors, also known as telecare, Careline or community alarms, can be fitted all round the home. When they're triggered, they can alert your carer, family members or a monitoring centre.
+      - type: paragraph
+        components:
+          - type: text
+            content: Alarms and sensors, also known as telecare, Careline or community alarms, can be fitted all round the home. When they're triggered, they can alert your carer, family members or a monitoring centre.
 
-    - type: paragraph
-      components:
-        - type: text
-          content: "Examples of telecare include:"
+      - type: paragraph
+        components:
+          - type: text
+            content: "Examples of telecare include:"
 
-    - type: bullets
-      content:
-        - Chair or bed sensors linked to a pager - these make an alarm call if you are out of bed for longer than a preset time
-        - Pressure mats with sensors and placed beside a bed, chair or by a door - these send an alert to a monitoring centre if you get out of bed and don't return
-        - A wearable alarm, on a pendant, belt or a watch
+      - type: bullets
+        content:
+          - Chair or bed sensors linked to a pager - these make an alarm call if you are out of bed for longer than a preset time
+          - Pressure mats with sensors and placed beside a bed, chair or by a door - these send an alert to a monitoring centre if you get out of bed and don't return
+          - A wearable alarm, on a pendant, belt or a watch
 
-    - type: subheading
-      content: Memory aids and tools
+      - type: subheading
+        content: Memory aids and tools
 
-    - type: paragraph
-      components:
-        - type: text
-          content: "If you are finding memory loss a problem, these devices can help you remember to do things:"
+      - type: paragraph
+        components:
+          - type: text
+            content: "If you are finding memory loss a problem, these devices can help you remember to do things:"
 
-    - type: bullets
-      content:
-        - Alarm medication reminders
-        - Sensors to switch off the gas
-        - Digital personal assistants  to set verbal reminders, like a timer to take medications at certain times during the day
+      - type: bullets
+        content:
+          - Alarm medication reminders
+          - Sensors to switch off the gas
+          - Digital personal assistants  to set verbal reminders, like a timer to take medications at certain times during the day
 
-    - type: subheading
-      content: Property exit sensors and personal locators
+      - type: subheading
+        content: Property exit sensors and personal locators
 
-    - type: paragraph
-      components:
-        - type: text
-          content: If you think you're at risk of getting lost, these products can help you stay safe. They can give your relatives and carers reassurance that they can find you.
+      - type: paragraph
+        components:
+          - type: text
+            content: If you think you're at risk of getting lost, these products can help you stay safe. They can give your relatives and carers reassurance that they can find you.
 
-    - type: bullets
-      content:
-        - Property sensors are fitted to a door frame can detect if someone leaves the property and doesn't return within a certain period of time. An alarm call is made to your relatives or carer who will come and help you.
-        - Personal locators allow you to share your location with your relatives or carers. They come in different forms such as a pendant, a watch, a bracelet or carried in a pocket.
+      - type: bullets
+        content:
+          - Property sensors are fitted to a door frame can detect if someone leaves the property and doesn't return within a certain period of time. An alarm call is made to your relatives or carer who will come and help you.
+          - Personal locators allow you to share your location with your relatives or carers. They come in different forms such as a pendant, a watch, a bracelet or carried in a pocket.
 
-    - type: subheading
-      content: Home environmental controls
+      - type: subheading
+        content: Home environmental controls
 
-    - type: paragraph
-      components:
-        - type: text
-          content: If you're having problems moving around because of disability or an illness, you can use remote controls to open doors, answer the telephone, operate domestic appliances and set your home temperature.
+      - type: paragraph
+        components:
+          - type: text
+            content: If you're having problems moving around because of disability or an illness, you can use remote controls to open doors, answer the telephone, operate domestic appliances and set your home temperature.
 
-    - type: subheading
-      content: Communication tools
+      - type: subheading
+        content: Communication tools
 
-    - type: paragraph
-      components:
-        - type: text
-          content: "If you have a sensory impairment, these devices and tools can help you:"
+      - type: paragraph
+        components:
+          - type: text
+            content: "If you have a sensory impairment, these devices and tools can help you:"
 
-    - type: bullets
-      content:
-        - Portable electronic communicators that allow you to record words or phrases that play back at the touch of a button
-        - Talking photo albums
+      - type: bullets
+        content:
+          - Portable electronic communicators that allow you to record words or phrases that play back at the touch of a button
+          - Talking photo albums
 
-    - type: paragraph
-      components:
-        - type: text
-          content: "Visit"
-        - type: hyperlink
-          url: https://www.livingmadeeasy.org.uk/
-          label: Living made easy
-        - type: text
-          content: for information on devices that can help you stay safe at home.
+      - type: paragraph
+        components:
+          - type: text
+            content: "Visit"
+          - type: hyperlink
+            url: https://www.livingmadeeasy.org.uk/
+            label: Living made easy
+          - type: text
+            content: for information on devices that can help you stay safe at home.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.ageuk.org.uk/information-advice/care/housing-options/adapting-home/telecare/
-          label: Age UK
-        - type: text
-          content: "gives information and advice on using technology for independence."
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.ageuk.org.uk/information-advice/care/housing-options/adapting-home/telecare/
+            label: Age UK
+          - type: text
+            content: "gives information and advice on using technology for independence."
 
-    - type: paragraph
-      components:
-        - type: text
-          content: "The Alzheimer's Society has a"
-        - type: hyperlink
-          url: https://www.alzheimers.org.uk/get-support/staying-independent/assistive-technology-and-dementia
-          label: guide on 'Assistive technology - devices to help with everyday living'.
+      - type: paragraph
+        components:
+          - type: text
+            content: "The Alzheimer's Society has a"
+          - type: hyperlink
+            url: https://www.alzheimers.org.uk/get-support/staying-independent/assistive-technology-and-dementia
+            label: guide on 'Assistive technology - devices to help with everyday living'.
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: https://www.atdementia.org.uk
-          label: AT Dementia
-        - type: text
-          content: "has guidance on assistive technology for people with dementia."
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.atdementia.org.uk
+            label: AT Dementia
+          - type: text
+            content: "has guidance on assistive technology for people with dementia."
 
-    - type: paragraph
-      components:
-        - type: hyperlink
-          url: http://www.independentforlonger.com
-          label: Visit Independent for longer
-        - type: text
-          content: "for real-life stories of how technology-enabled care services have made a difference to people needing different types of care and support."
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: http://www.independentforlonger.com
+            label: Visit Independent for longer
+          - type: text
+            content: "for real-life stories of how technology-enabled care services have made a difference to people needing different types of care and support."
+
+  equipment:
+    title: gadgets and equipment
+    sections:
+      - type: paragraph
+        components:
+          - type: text
+            content: You can buy your own alarms, sensors and monitors.
+      
+      - type: paragraph
+        components:
+          - type: text
+            content: The Disabled Living Foundation's
+          - type: hyperlink
+            url: https://asksara.dlf.org.uk/?auth=sara5
+            label: Ask SARA tool
+
+      - type: subheading
+        content: Contact your local council
+
+      - type: paragraph
+        components:
+          - type: text
+            content: You may be eligible for a pendant alarm or other telecare equipment from your local council.
+          - type: hyperlink
+            url: https://www.essex.gov.uk/Health-Social-Care/Health-and-social-care-for-adults/charging-for-care-services/Pages/Default.aspx
+            label: Contact your local council
+          - type: text
+            content: to discuss your care and support needs.
+        
+  professional: &tech_services
+    title: services
+    sections:
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://helplineplus.co.uk
+            label: Helpline
+          - type: text
+            content: is a company that offers both monitoring and response services in the Essex area.
+
+      - type: paragraph
+        components:
+          - type: text
+            content: You might qualify to get Helpline free for a 12-week period, after which you can choose your level of service.
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.careline.co.uk
+            label: Careline
+          - type: text
+            content: offers a personal alarm subscription service to make sure there is always help in an emergency.
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.provide.org.uk/service/carecall-service
+            label: Provide
+          - type: text
+            content: also offer a personal alarm service called Carecall.
+
+  activities_and_groups:
+    *tech_services
+# Everyday Tasks
+
+personal_care:
+
+meals_shopping:
+
+housework:
+
+# Out And About
+
+mobility_aids:
+
+transportation:
+
+# Physically & Mentally Fit
+
+fit_active:
