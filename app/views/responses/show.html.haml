@@ -1,41 +1,55 @@
 %h1.govuk-heading-xl
   Your results
-
 %p.govuk-body-l
+  %strong
+    You chose:
   - @response.help_category.each do |help_category|
-    - @results[help_category]["consistent_text"].each do | section|
-      - if section["type"] == "paragraph"
-        %p.govuk-body-l
-          = section["content"]
-      - elsif section["type"] == "bullets"
-        %ul.gov-body
-          - section["content"].each do |bullet_point|
-            %li.govuk-body-l
-              = bullet_point
-      - elsif section["type"] == "subheading"
-        %p.govuk-heading-l
-          = section["content"]
+    - if @response.help_category.last == help_category
+      = @results[help_category]["title"]
+    - else
+      = @results[help_category]["title"] + ","
+%p.govuk-body-l
+  %strong
+    And:
+  - @info_types.each do |info_type|
+    - if @info_types.last == info_type
+      = @results["avoid_accidents"][info_type]["title"]
+    - else
+      = @results["avoid_accidents"][info_type]["title"] + ","
 
-%p.govuk-body
   - @response.help_category.each do |help_category|
-    - @response.info_type.each do |info_type|
-      - @results[help_category][info_type].each do |section|
+    %h2.govuk-heading-l
+      = @results[help_category]["title"]
+    %p.govuk-body-l
+      - @results[help_category]["consistent_text"].each do | section|
         - if section["type"] == "paragraph"
-          %p.govuk-body
-            - section["components"].each do |component|
-              - if component["type"] == "text"
-                = component["content"]
-              - elsif component["type"] == "hyperlink"
-                = link_to component["label"], component["url"], target: :_blank, class: "govuk-link govuk-body"
+          %p.govuk-body-l
             = section["content"]
         - elsif section["type"] == "bullets"
           %ul.gov-body
             - section["content"].each do |bullet_point|
-              %li.govuk-body
+              %li.govuk-body-l
                 = bullet_point
         - elsif section["type"] == "subheading"
-          %p.govuk-heading-m
+          %h3.govuk-heading-m
             = section["content"]
 
-
-  
+    %p.govuk-body
+      - @response.info_type.each do |info_type|
+        - @results[help_category][info_type]["sections"].each do |section|
+          - if section["type"] == "paragraph"
+            %p.govuk-body
+              - section["components"].each do |component|
+                - if component["type"] == "text"
+                  = component["content"]
+                - elsif component["type"] == "hyperlink"
+                  = link_to component["label"], component["url"], target: :_blank, class: "govuk-link govuk-body"
+              = section["content"]
+          - elsif section["type"] == "bullets"
+            %ul.gov-body
+              - section["content"].each do |bullet_point|
+                %li.govuk-body
+                  = bullet_point
+          - elsif section["type"] == "subheading"
+            %p.govuk-heading-m
+              = section["content"]
