@@ -1,6 +1,6 @@
 staying_independent:
   title: I want to make sure I can stay independent at home
-  hint: Ways to help you enjoy independent living for longer
+  hint: Technology, tips and alterations to make it easier for you to stay at home
   steps:
     -
       title: Thanks. You chose staying independent. Can you now tick any of these statements that apply to you
@@ -82,7 +82,7 @@ out_and_about:
           value: activities_and_groups
 fitness:
   title: I want to keep physically and mentally fit
-  hint: Activities to keep active and lift your mood
+  hint: Activities to keep healthy and lift your mood
   steps:
     -
       title: Thanks. You chose keeping mentally and physically well. Can you now tick any of these statements that apply to you
