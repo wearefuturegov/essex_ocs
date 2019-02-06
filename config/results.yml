@@ -548,9 +548,87 @@ tech:
 
   activities_and_groups:
     *tech_services
+
 # Everyday Tasks
 
 personal_care:
+  title: Personal care
+  consistent_text:
+    - type: paragraph
+      content: If you need help with everyday tasks such as washing, laundry, cooking and taking medication, there are some great gadgets to help you. Or if you need a little extra help, you might need to get someone to help you.
+
+  myself: &personal_care_myself
+    title: information that you can look at yourself
+    sections:
+      - type: paragraph
+        components:
+        - type: text
+          content: There is equipment that can help you with everyday tasks like washing and dressing, or going to the toilet)
+
+      - type: subheading
+        content: Equipment to help with dressing
+
+      - type: bullets
+        content:
+        - button hookers
+        - dressing sticks and zip pullers
+        - sock and stocking aids to help you put them on
+        - long-handed shoe horns to make it easier to get your shoes on and off
+
+      - type: subheading
+        content: Equipment to help with washing
+      - type: bullets
+        content:
+        - tap turners, lever taps and automatic taps if you have problems with your grip
+        - grab rails to help you get in and out of the bath or shower
+        - a bath board, bath seat or bath lift to make it easier and safer to use the bath
+        - shower boards and swivel seats to help you get in and out of the bath
+        - long-handled sponges and brushes to help you wash your back and feet
+
+      - type: subheading
+        content: Equipment to help in the toilet
+
+      - type: bullets
+        content:
+        - raised toilet seats and toilet rails to make it easier to get on or off the toilet
+        - long-handed bottom wipers to help you clean yourself after going to the toilet
+        - waterproof bedding and mattresses can help manage incontinence
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://asksara.dlf.org.uk/?auth=sara5
+            label: The Disabled Living Foundation's Ask SARA tool
+          - type: text
+            content: gives advice on equipment and where to get them.
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.ecl.org
+            label: Essex Cares Ltd (ECL)
+          - type: text
+            content: provides sensory and equipment services on behalf of Essex County Council
+
+      - type: paragraph
+        components:
+          - type: text
+            content: You might also be eligible for
+          - type: hyperlink
+            url: https://www.livingwellessex.org/at-home/staying-in-your-own-home/requesting-an-assessment
+            label: equipment from Essex County Council
+          - type: text
+            content: The help you get depends on the assessed level of difficulty you're having at home and the risk to your wellbeing.
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.essex.gov.uk/Health-Social-Care/Health-and-social-care-for-adults/charging-for-care-services/Pages/Default.aspx
+            label: Visit Essex County Council
+          - type: text
+            content: for information on using direct payments to buy equipment to meet your care and support needs.
+
+  equipment: *personal_care_myself
 
 meals_shopping:
 
