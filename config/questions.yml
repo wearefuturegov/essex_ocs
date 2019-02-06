@@ -35,12 +35,12 @@ everyday_tasks:
       hint: You can choose more than one
       name: 'help_category'
       answers:
-        - title: I'd like some help with personal care (like washing and dressing)
+        - title: I'd like some help with cleaning and housework or personal care (like washing and dressing)
           value: personal_care
         - title: I'd like some help with meals and shopping
           value: meals_shopping
-        - title: I'd like some help with cleaning, housework and home repairs
-          value: housework
+        - title: I'd like some help with home repairs and decorating
+          value: home_repairs
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
