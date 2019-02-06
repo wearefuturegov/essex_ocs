@@ -53,3 +53,14 @@
           - elsif section["type"] == "subheading"
             %p.govuk-heading-m
               = section["content"]
+
+%h2.govuk-heading-l
+  Need more help?
+%p.govuk-body
+  If you think that you need some extra help to keep you independent at home, you can contact
+  = link_to "Essex County Council Adult Social Care", "https://www.essex.gov.uk/Health-Social-Care/Pages/Health-and-Social-Care.aspx", target: :_blank, class: "govuk-link govuk-body"
+  for an assessment of your needs.
+%p.govuk-body
+  Most people have to pay something towards their care.
+  = link_to "Find out how Essex County Council", "https://www.essex.gov.uk/Health-Social-Care/Health-and-social-care-for-adults/charging-for-care-services/Pages/Default.aspx", target: :_blank, class: "govuk-link govuk-body"
+  works out how much you will be asked to pay.
