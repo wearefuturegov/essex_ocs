@@ -240,6 +240,7 @@ avoid_accidents: # help_category
             label: Essex County Council Adult Social Care
           - type: text
             content: for an assessment of your needs.
+
 adapt_home:
   title: Adapt your home
   consistent_text:
@@ -632,7 +633,61 @@ personal_care:
 
 meals_shopping:
 
-housework:
+home_repairs:
+  title: Home repairs & decorating
+  consistent_text:
+    - type: paragraph
+      content: You might be able to get help with cleaning, repairs and decorating from the council or local agencies. Or you can look for trusted tradespeople to carry out the work for you.
+
+  myself: &home_repairs_myself
+    title: information that you can look at yourself
+    sections:
+      - type: paragraph
+        components:
+          - type: text
+            content: "If you want to arrange repair work for yourself, it's important to choose reliable tradespeople who won't overcharge you. Find tradespeople near you:"
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.buywithconfidence.gov.uk
+            label: Buy with confidence approved trader scheme
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.ratedpeople.com
+            label: Rated people
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.trustatrader.com
+            label: Trust a trader
+
+      - type: paragraph
+        components:
+          - type: text
+            content: There may be a local Home Improvement Agency (HIA) in your area that can help you at home. These are not-for-profit organisations that help owner-occupiers or tenants of private rented accommodation who are older, disabled or on low incomes to repair, improve or adapt their homes. They offer practical help with things like arranging a survey, getting estimates for work, or accessing financial help.
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: http://www.findmyhia.org.uk
+            label: Find your local HIA here.
+
+      - type: paragraph
+        components:
+          - type: text
+            content: You may also be able to get help with repairs and decorating from local voluntary organisations.
+
+      - type: paragraph
+        components:
+          - type: hyperlink
+            url: https://www.ageuk.org.uk/essex
+            label: Age UK's handyperson service
+          - type: text
+            content: operates all over the country. These services offer older people help with small practical jobs to make their lives life easier and safer around the home.
 
 # Out And About
 
