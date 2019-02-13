@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/wearefuturegov/essex_ocs.svg?style=svg)](https://circleci.com/gh/wearefuturegov/essex_ocs)
+
 # Essex OCS
 
 The beginnings of a very basic proof of concept / prototype for a digital assistant
