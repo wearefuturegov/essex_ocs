@@ -38,9 +38,14 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'rubocop'
 
+# CMS
 gem "comfortable_mexican_sofa", "~> 2.0.0"
 
+# For loading .env environment files
 gem 'dotenv-rails', groups: [:development, :test]
+
+# For sending SMS
+gem 'twilio-ruby'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
