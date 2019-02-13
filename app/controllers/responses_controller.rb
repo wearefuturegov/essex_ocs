@@ -13,8 +13,10 @@ class ResponsesController < ApplicationController
     if params[:next_step].present?
       redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
     else
-      @results = Comfy::Cms::Site.first.pages.first.children
-      @help_category_results = @results.where(slug: @response["help_category"])
+      if Comfy::Cms::Site.first
+        @results = Comfy::Cms::Site.first.pages.first.children
+        @help_category_results = @results.where(slug: @response["help_category"])
+      end
       render :show
     end
   end
