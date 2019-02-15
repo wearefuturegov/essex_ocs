@@ -1,0 +1,43 @@
+$brand: #d00f44;
+
+footer {
+  display: none;
+}
+.govuk-template {
+  background: #fff;
+}
+.govuk-header__container {
+  border-color: $brand;
+}
+.govuk-button {
+  background: $brand;
+  border-radius: 5px;
+  box-shadow: none;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &:hover, &:focus {
+    background: darken($brand, 10);
+  }
+  &:focus {
+    outline: 2px solid #ffbf47;
+  }
+  &:disabled {
+    background: lighten($brand, 10);
+    &:hover {
+      background: lighten($brand, 20);
+    }
+  }
+}
+
+.turbolinks-progress-bar {
+  background-color: $brand;
+}
+
+.verticle_align {
+  .govuk-radios__input, .govuk-radios__input + .govuk-radios__label::before, .govuk-radios__input + .govuk-radios__label::after {
+    margin-top: 15px;
+  }
+}
