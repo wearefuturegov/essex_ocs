@@ -1,5 +1,10 @@
 $brand: #d00f44;
-
+.govuk-body a, .govuk-link {
+  color: $brand;
+  &:hover {
+    color: darken($brand, 10);
+  }
+}
 footer {
   display: none;
 }
