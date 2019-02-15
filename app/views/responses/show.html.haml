@@ -1,3 +1,22 @@
+%h1.govuk-heading-xl
+  Your results
+%p.govuk-body-l
+  %strong
+    You chose:
+  - @help_category_results.each do |help_category_result|
+    - if @help_category_results.last == help_category_result
+      = help_category_result.label
+    - else
+      = help_category_result.label + ","
+%p.govuk-body-l
+  %strong
+    And:
+  - @info_types.each do |info_type|
+    - if @info_types.last == info_type
+      = @help_category_results.first.children.where(slug: info_type).first.label
+    - else
+      = @help_category_results.first.children.where(slug: info_type).first.label + ","
+
 - @help_category_results.each do |help_category_result|
   %h2.govuk-heading-l
     = help_category_result.label

@@ -24,6 +24,7 @@ class ResponsesController < ApplicationController
   def show
     @results = Comfy::Cms::Site.first.pages.first.children
     @help_category_results = @results.where(slug: @response["help_category"])
+    @info_types= @response["info_type"]
   end
 
   private
