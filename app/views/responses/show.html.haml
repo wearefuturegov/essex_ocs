@@ -15,74 +15,18 @@
     - if @info_types.last == info_type
       = @help_category_results.first.children.where(slug: info_type).first.label
     - else
-      = @results["avoid_accidents"][info_type]["title"] + ","
-  .accordion
-    - @response.help_category.each do |help_category|
-      .accord-toggle
-        %h2.govuk-heading-l
-          = @results[help_category]["title"]
-      .accord-cont
-        %p.govuk-body-l
-          - @results[help_category]["consistent_text"].each do | section|
-            - if section["type"] == "paragraph"
-              %p.govuk-body-l
-                = section["content"]
-            - elsif section["type"] == "bullets"
-              %ul.gov-body
-                - section["content"].each do |bullet_point|
-                  %li.govuk-body-l
-                    = bullet_point
-            - elsif section["type"] == "subheading"
-              %h3.govuk-heading-m
-                = section["content"]
+      = @help_category_results.first.children.where(slug: info_type).first.label + ","
 
-        %p.govuk-body
-          - @response.info_type.each do |info_type|
-            - @results[help_category][info_type]["sections"].each do |section|
-              - if section["type"] == "paragraph"
-                %p.govuk-body
-                  - section["components"].each do |component|
-                    - if component["type"] == "text"
-                      = component["content"]
-                    - elsif component["type"] == "hyperlink"
-                      = link_to component["label"], component["url"], target: :_blank, class: "govuk-link govuk-body"
-                  = section["content"]
-              - elsif section["type"] == "bullets"
-                %ul.gov-body
-                  - section["content"].each do |bullet_point|
-                    %li.govuk-body
-                      = bullet_point
-              - elsif section["type"] == "subheading"
-                %p.govuk-heading-m
-                  = section["content"]
+- @help_category_results.each do |help_category_result|
+  %h2.govuk-heading-l
+    = help_category_result.label
+  %p.govuk-body
+    - help_category_result.fragments.each do |fragment|
+      %p.govuk-body
+        = fragment.content.html_safe
 
-%br
-%br
-%br
-
-%h2.govuk-heading-l
-  Need more help?
-%p.govuk-body
-  If you think that you need some extra help to keep you independent at home, you can contact
-  = link_to "Essex County Council Adult Social Care", "https://www.essex.gov.uk/Health-Social-Care/Pages/Health-and-Social-Care.aspx", target: :_blank, class: "govuk-link govuk-body"
-  for an assessment of your needs.
-%p.govuk-body
-  Most people have to pay something towards their care.
-  = link_to "Find out how Essex County Council", "https://www.essex.gov.uk/Health-Social-Care/Health-and-social-care-for-adults/charging-for-care-services/Pages/Default.aspx", target: :_blank, class: "govuk-link govuk-body"
-  works out how much you will be asked to pay.
-
-/       = @help_category_results.first.children.where(slug: info_type).first.label + ","
-
-/ - @help_category_results.each do |help_category_result|
-/   %h2.govuk-heading-l
-/     = help_category_result.label
-/   %p.govuk-body
-/     - help_category_result.fragments.each do |fragment|
-/       %p.govuk-body
-/         = fragment.content.html_safe
-
-/   - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
-/     %h2.govuk-heading-m
-/       = info_type.label
-/     - info_type.fragments.each do |fragment|
-/       = fragment.content.html_safe
+  - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
+    %h2.govuk-heading-m
+      = info_type.label
+    - info_type.fragments.each do |fragment|
+      = fragment.content.html_safe
