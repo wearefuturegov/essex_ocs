@@ -1,3 +1,12 @@
 development:
   adapter: postgresql
+  encoding: unicode
+  database: essex_ocs_developement
+  pool: 5
   database_url: <%= ENV['DATABASE_URL'] %>
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: essex_ocs_test
+  pool: 5
