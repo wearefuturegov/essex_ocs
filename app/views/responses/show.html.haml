@@ -3,17 +3,17 @@
 %p.govuk-body-l
   %strong
     You chose:
-  - @response.help_category.each do |help_category|
-    - if @response.help_category.last == help_category
-      = @results[help_category]["title"]
+  - @help_category_results.each do |help_category_result|
+    - if @help_category_results.last == help_category_result
+      = help_category_result.label
     - else
-      = @results[help_category]["title"] + ","
+      = help_category_result.label + ","
 %p.govuk-body-l
   %strong
     And:
   - @info_types.each do |info_type|
     - if @info_types.last == info_type
-      = @results["avoid_accidents"][info_type]["title"]
+      = @help_category_results.first.children.where(slug: info_type).first.label
     - else
       = @results["avoid_accidents"][info_type]["title"] + ","
   .accordion
@@ -70,3 +70,19 @@
   Most people have to pay something towards their care.
   = link_to "Find out how Essex County Council", "https://www.essex.gov.uk/Health-Social-Care/Health-and-social-care-for-adults/charging-for-care-services/Pages/Default.aspx", target: :_blank, class: "govuk-link govuk-body"
   works out how much you will be asked to pay.
+
+/       = @help_category_results.first.children.where(slug: info_type).first.label + ","
+
+/ - @help_category_results.each do |help_category_result|
+/   %h2.govuk-heading-l
+/     = help_category_result.label
+/   %p.govuk-body
+/     - help_category_result.fragments.each do |fragment|
+/       %p.govuk-body
+/         = fragment.content.html_safe
+
+/   - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
+/     %h2.govuk-heading-m
+/       = info_type.label
+/     - info_type.fragments.each do |fragment|
+/       = fragment.content.html_safe
