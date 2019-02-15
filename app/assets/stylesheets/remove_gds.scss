@@ -25,6 +25,7 @@ footer {
 
   &:hover, &:focus {
     background: darken($brand, 10);
+    color: #fff;
   }
   &:focus {
     outline: 2px solid #ffbf47;
@@ -35,6 +36,10 @@ footer {
       background: lighten($brand, 20);
     }
   }
+}
+
+.single_category {
+  margin-bottom: 50px;
 }
 
 .turbolinks-progress-bar {
