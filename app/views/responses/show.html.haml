@@ -52,10 +52,10 @@
     Want to save this for later?
   Just give us your phone number and we'll send you a link to these results
 
-  = form_for response_send_results_sms_path(@response) do |f|
+  = form_for @response, url: response_send_results_sms_path(@response.id), method: :patch do |f|
     .govuk-form-group
       = f.label :phone_number, class: 'govuk-label', for: 'width-10'
-      = f.telephone_field :phone_number, class: 'govuk-input govuk-input--width-10', name: "width-10"
+      = f.telephone_field :phone_number, class: 'govuk-input govuk-input--width-10'
       = f.submit "Send", class: 'govuk-button'
 
 %h2.govuk-heading-l
