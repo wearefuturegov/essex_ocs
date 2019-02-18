@@ -46,3 +46,8 @@
               - more_help.fragments.each do |fragment|
                 = fragment.content.html_safe
     %hr
+
+%h2.govuk-heading-l
+  = @results.where(slug: 'more_help_generic').first.label
+- @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
+  = fragement.content.html_safe
