@@ -1,6 +1,6 @@
 %span.govuk-caption-xl
   We’ll ask you a few questions that’ll help us find the information you need. First things first - step 1 of 4
-
+  
 = form_for @response do |f|
 
   .govuk-form-group
@@ -10,11 +10,11 @@
           Can you pick a statement that best describes what you need?
       .govuk-radios
         - @questions.each do |k, q|
-          .govuk-radios__item.verticle_align
+          .govuk-radios__item
             = f.radio_button :category, k, 'aria-describedby' => "#{k}-item-hint", class: 'govuk-radios__input'
             %label.govuk-label.govuk-radios__label.govuk-label--s{for: "response_category_#{k}"}= q['title']
             %span.govuk-hint.govuk-radios__hint{id: "#{k}-item-hint"}= q['hint']
-
+                        
     %p
       = submit_tag 'Save and continue', class: 'govuk-button'
-
+      

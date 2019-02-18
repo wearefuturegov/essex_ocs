@@ -13,13 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
+ 
 $govuk-images-path: "/assets/";
 $govuk-fonts-path: "/assets/";
 $govuk-font-url-function: "font-url";
 $govuk-image-url-function: "image-url";
 
 @import "govuk-frontend/all";
-
-@import "remove_gds";
-@import "font-awesome";
