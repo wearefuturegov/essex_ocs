@@ -28,10 +28,18 @@ class ResponsesController < ApplicationController
     @info_types= @response["info_type"]
   end
 
+  def send_results_sms
+    @response = Response.find(params[:response_id])
+    @response.update(response_params)
+    body = "https://essex-ocs.herokuapp.com/responses/#{@response.id}"
+    TwilioService.send_sms(body, @response.phone_number)
+    redirect_to response_path(@response)
+  end
+
   private
 
   def response_params
-    params.require(:response).permit(:category, help_category: [], info_type: [], payment_options: [])
+    params.require(:response).permit(:phone_number, :category, help_category: [], info_type: [], payment_options: [])
   end
   
   def get_response
