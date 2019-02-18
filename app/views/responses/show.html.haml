@@ -17,6 +17,8 @@
     - else
       = @help_category_results.first.children.where(slug: info_type).first.label + ","
 
+  %hr
+
   - @help_category_results.each do |help_category_result|
     .single_category
       %h2.govuk-heading-l
@@ -45,7 +47,8 @@
             .accord-cont
               - more_help.fragments.each do |fragment|
                 = fragment.content.html_safe
-    %hr
+    - unless help_category_result == @help_category_results.last
+      %hr
 
 .save_for_later
   %h2.govuk-heading-l
