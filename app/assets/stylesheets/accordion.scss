@@ -1,0 +1,26 @@
+.accordion {
+  .accord-single {
+    margin-bottom: 10px;
+    &.open {
+      .accord-toggle .fa {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .accord-toggle {
+    cursor: pointer;
+  }
+  .accord-cont {
+    display: none;
+  }
+  .accord-cont.default {
+    display: block;
+  }
+  .accord-toggle .fa {
+    vertical-align: middle;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+}

@@ -10,23 +10,28 @@
       = help_category_result.label + ","
 %p.govuk-body-l
   %strong
-    And:
+    You were most interested in:
   - @info_types.each do |info_type|
     - if @info_types.last == info_type
       = @help_category_results.first.children.where(slug: info_type).first.label
     - else
       = @help_category_results.first.children.where(slug: info_type).first.label + ","
 
-- @help_category_results.each do |help_category_result|
-  %h2.govuk-heading-l
-    = help_category_result.label
-  %p.govuk-body
-    - help_category_result.fragments.each do |fragment|
+  - @help_category_results.each do |help_category_result|
+    .single_category
+      %h2.govuk-heading-l
+        = help_category_result.label
       %p.govuk-body
-        = fragment.content.html_safe
-
-  - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
-    %h2.govuk-heading-m
-      = info_type.label
-    - info_type.fragments.each do |fragment|
-      = fragment.content.html_safe
+        - help_category_result.fragments.each do |fragment|
+          %p.govuk-body
+            = fragment.content.html_safe
+      .accordion
+        - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
+          .accord-single
+            .accord-toggle
+              %h2.govuk-heading-m
+                = info_type.label
+                =fa_icon 'chevron-down'
+            .accord-cont
+              - info_type.fragments.each do |fragment|
+                = fragment.content.html_safe
