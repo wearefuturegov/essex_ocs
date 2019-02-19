@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
-  def index; end
+
+  def index
+    @welcome_page = Comfy::Cms::Site.first.pages.first
+  end
 
   def questions
     @questions ||= YAML.safe_load(File.read(Rails.root.join('config', 'questions.yml')))
