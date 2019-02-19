@@ -6,9 +6,13 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    response = Response.create(response_params)
-    session[:response_id] = response.id
-    redirect_to journeys_path
+    @response = Response.new(response_params)
+    if @response.save
+      session[:response_id] = @response.id
+      redirect_to journeys_path
+    else
+      render :new
+    end
   end
 
   def update

@@ -8,6 +8,18 @@
   We will not share these answers with anyone else
 
 = form_for @response, url: {action: "create"} do |f|
+
+  - if @response.errors.any?
+    .form_errors
+      %h4
+        = pluralize(@response.errors.count, "error")
+        found, please address before continuing:
+
+      .ul
+      - @response.errors.full_messages.each do |msg|
+        .li
+          = msg
+
   %fieldset.govuk-fieldset
     %legend.govuk-fieldset__legend.govuk-fieldset__legend--l
       %h2.govuk-fieldset__heading
