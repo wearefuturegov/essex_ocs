@@ -13,6 +13,14 @@ footer {
 }
 .govuk-header__container {
   border-color: $brand;
+  border: none;
+  padding-bottom: 10px;
+}
+.govuk-header {
+  background: $brand;
+}
+.govuk-input {
+  border-radius: 10px;
 }
 .govuk-button {
   background: $brand;
