@@ -1,0 +1,22 @@
+%h1.govuk-heading-xl
+  Before starting, we need your name
+
+%p.govuk-body
+  With your name we can identify the answers you give and pass them onto the Navigator, who will then be able to provide you with a more focused conversation.
+
+%span.govuk-hint
+  We will not share these answers with anyone else
+
+= form_for @response, url: {action: "create"} do |f|
+  %fieldset.govuk-fieldset
+    %legend.govuk-fieldset__legend.govuk-fieldset__legend--l
+      %h2.govuk-fieldset__heading
+        What is your name?
+    .govuk-form-group
+      = f.label :forename, "First name", class: 'govuk-label'
+      = f.text_field :forename, class: 'govuk-input govuk-input--width-10'
+    .govuk-form-group
+      = f.label :surname, "Last name", class: 'govuk-label'
+      = f.text_field :surname, class: 'govuk-input govuk-input--width-10'
+    .govuk-form-group
+      = f.submit "Continue", class: 'govuk-button'

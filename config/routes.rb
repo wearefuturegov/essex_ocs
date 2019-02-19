@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :steps, only: :show
   end
 
-  resources :responses, only: %i[create update show] do
+  resources :responses, only: %i[new create update show] do
     patch :send_results_sms
   end
 

@@ -1,10 +1,14 @@
 class ResponsesController < ApplicationController
   before_action :get_response, only: %i[update show]
 
+  def new
+    @response = Response.new
+  end
+
   def create
     response = Response.create(response_params)
     session[:response_id] = response.id
-    redirect_to journey_step_path(journey_id: response.category, id: 1)
+    redirect_to journeys_path
   end
 
   def update
@@ -39,7 +43,7 @@ class ResponsesController < ApplicationController
   private
 
   def response_params
-    params.require(:response).permit(:phone_number, :category, help_category: [], info_type: [], payment_options: [])
+    params.require(:response).permit(:phone_number, :forename, :surname, :category, help_category: [], info_type: [], payment_options: [])
   end
   
   def get_response

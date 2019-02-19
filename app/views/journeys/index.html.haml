@@ -2,6 +2,7 @@
   We’ll ask you a few questions that’ll help us find the information you need. First things first - step 1 of 4
 
 = form_for @response do |f|
+  = hidden_field_tag :next_step, @next_step
 
   .govuk-form-group
     %fieldset.govuk-fieldset{"aria-describedby" => "sign-in-hint"}
