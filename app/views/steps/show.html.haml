@@ -1,11 +1,11 @@
-%div{:id => "stepQuestion_#{@current_step}"}
+%div{:id => "stepQuestion_#{@current_step+1}"}
   - if @previous_step
     = link_to 'Back', journey_step_path(id: @previous_step, journey_id: params[:journey_id]), class: 'govuk-back-link'
   - else
     = link_to 'Back', journeys_path, class: 'govuk-back-link'
 
   %span.govuk-caption-xl
-    = "Step #{@current_step} of #{@step_count}"
+    = "Step #{@current_step+1} of #{@step_count}"
   = form_for @response do |f|
     = hidden_field_tag :next_step, @next_step
     .govuk-form-group
