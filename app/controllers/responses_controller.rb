@@ -18,14 +18,16 @@ class ResponsesController < ApplicationController
   def update
     @response = Response.find(params[:id])
     @response.update(response_params)
-    if params[:next_step].present?
+
+    if Comfy::Cms::Site.first
+      @results = Comfy::Cms::Site.first.pages.first.children
+      @help_category_results = @results.where(slug: @response["help_category"])
+      @info_types= @response["info_type"]
+    end
+
+    if params[:next_step].present? && @response.category != 'not_sure'
       redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
     else
-      if Comfy::Cms::Site.first
-        @results = Comfy::Cms::Site.first.pages.first.children
-        @help_category_results = @results.where(slug: @response["help_category"])
-        @info_types= @response["info_type"]
-      end
       render :show
     end
   end
@@ -47,7 +49,15 @@ class ResponsesController < ApplicationController
   private
 
   def response_params
-    params.require(:response).permit(:phone_number, :forename, :surname, :category, help_category: [], info_type: [], payment_options: [])
+    params.require(:response).permit(
+      :phone_number,
+      :forename,
+      :surname,
+      :suggested_category,
+      :suggested_help_category,
+      :suggested_info_type,
+      :category,
+      help_category: [], info_type: [], payment_options: [])
   end
   
   def get_response
