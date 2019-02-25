@@ -27,7 +27,7 @@ staying_independent:
           value: equipment
         - title: I want to see what type of professional help I could get with this
           value: professional
-        - title: I want to find out about groups and activities in my area
+        - title: I want to find out about local support
           value: activities_and_groups
         - title: Something else
           value: something_else
@@ -61,7 +61,7 @@ everyday_tasks:
           value: equipment
         - title: I want to see what type of professional help I could get with this
           value: professional
-        - title: I want to find out about groups and activities in my area
+        - title: I want to find out about local support
           value: activities_and_groups
         - title: Something else
           value: something_else
@@ -93,7 +93,7 @@ out_and_about:
           value: equipment
         - title: I want to see what type of professional help I could get with this
           value: professional
-        - title: I want to find out about groups and activities in my area
+        - title: I want to find out about local support
           value: activities_and_groups
         - title: Something else
           value: something_else
@@ -125,7 +125,7 @@ fitness:
           value: equipment
         - title: I want to see what type of professional help I could get with this
           value: professional
-        - title: I want to find out about groups and activities in my area
+        - title: I want to find out about local support
           value: activities_and_groups
         - title: Something else
           value: something_else
