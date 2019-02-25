@@ -18,8 +18,8 @@
           .govuk-checkboxes__item
             = check_box_tag "response[#{@name}][]", a['value'], @response.send(@name).include?(a['value']), id: "response_#{@name}_#{a['value']}", class: 'govuk-checkboxes__input'
             %label.govuk-label.govuk-checkboxes__label{for: "response_#{@name}_#{a['value']}"}= a['title']
-            - if a['key'] == 'something_else'
-              = f.text_field_tag 'something_else'
+            - if a['value'] == 'something_else'
+              = f.text_field a['suggested'], class: 'govuk-input govuk-input--width-20'
 
       %p
         = submit_tag 'Save and continue', class: 'govuk-button'
