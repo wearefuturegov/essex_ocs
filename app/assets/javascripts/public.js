@@ -1,7 +1,10 @@
 $(function() {
   $('.accordion').each(function() { $(this).accordion() });
-  $('.display_hidden').each(function() { $(this).displayHidden() });
-  $('#firstQuestion').blankValidation();
+  $('.display_hidden_radio').each(function() { $(this).displayHiddenRadio() });
+  $('.display_hidden_checkbox').each(function() { $(this).displayHiddenCheckbox() });
+  $('#firstQuestion').blankValidation('radio');
+  $('#stepQuestion_2').blankValidation('checkbox');
+  $('#stepQuestion_3').blankValidation('checkbox');
 });
 
 

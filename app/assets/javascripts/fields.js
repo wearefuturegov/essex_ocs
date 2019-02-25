@@ -1,4 +1,4 @@
-$.fn.displayHidden = function() {
+$.fn.displayHiddenRadio = function() {
   var displayInput = this;
   $("input:radio").change(function () {
     if (displayInput.is(':checked')) {
@@ -9,12 +9,24 @@ $.fn.displayHidden = function() {
   });
 };
 
-$.fn.blankValidation = function() {
+$.fn.displayHiddenCheckbox = function() {
+  var displayInput = this;
+  displayInput.change(function () {
+    if (displayInput.is(':checked')) {
+      $('.hidden_field').show();
+    } else {
+      $('.hidden_field').hide().val('');
+    }
+  });
+};
+
+
+$.fn.blankValidation = function(inputType = 'radio') {
   var form = this.find($('form'));
-  var count = $('input[type=radio]').length;
+  var count = $('input[type=' + inputType + ']').length;
 
   form.submit(function(e) {
-    if (!$("input[type=radio]:checked").val()) {
+    if (!$("input[type=" + inputType + "]:checked").val()) {
       $('.form_errors').removeClass('display_none');
       return false;
     }
