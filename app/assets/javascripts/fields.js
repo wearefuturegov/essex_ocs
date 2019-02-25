@@ -11,14 +11,12 @@ $.fn.displayHidden = function() {
 
 $.fn.blankValidation = function() {
   var form = this.find($('form'));
+  var count = $('input[type=radio]').length;
+
   form.submit(function(e) {
-    e.preventDefault();
-    $('input[type=radio]').each(function () {
-      if($(this).is(':checked')){
-
-      }
-    });
-    $('.form_errors').removeClass('display_none');
+    if (!$("input[type=radio]:checked").val()) {
+      $('.form_errors').removeClass('display_none');
+      return false;
+    }
   });
-
 };
