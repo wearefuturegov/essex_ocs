@@ -1,25 +1,30 @@
-- if @previous_step
-  = link_to 'Back', journey_step_path(id: @previous_step, journey_id: params[:journey_id]), class: 'govuk-back-link'
-- else
-  = link_to 'Back', journeys_path, class: 'govuk-back-link'
+%div{:id => "stepQuestion_#{@current_step+1}"}
+  - if @previous_step
+    = link_to 'Back', journey_step_path(id: @previous_step, journey_id: params[:journey_id]), class: 'govuk-back-link'
+  - else
+    = link_to 'Back', journeys_path, class: 'govuk-back-link'
 
-%span.govuk-caption-xl
-  = "Step #{@current_step} of #{@step_count}"
+  %span.govuk-caption-xl
+    = "Step #{@current_step+1} of #{@step_count}"
+  = form_for @response do |f|
+    = hidden_field_tag :next_step, @next_step
+    .govuk-form-group
+      %fieldset.govuk-fieldset{"aria-describedby" => "#{@name}-hint"}
+        %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
+          %h1.govuk-fieldset__heading= @title
+        %span.govuk-hint{id: "#{@name}-hint"}= @hint
+        .form_errors.display_none
+          %h4 Please select an option to continue
 
-= form_for @response do |f|
-  = hidden_field_tag :next_step, @next_step
-  .govuk-form-group
-    %fieldset.govuk-fieldset{"aria-describedby" => "#{@name}-hint"}
-      %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
-        %h1.govuk-fieldset__heading= @title
-      %span.govuk-hint{id: "#{@name}-hint"}= @hint
-      .govuk-checkboxes
-        - @answers.each do |a|
-          .govuk-checkboxes__item
-            = check_box_tag "response[#{@name}][]", a['value'], @response.send(@name).include?(a['value']), id: "response_#{@name}_#{a['value']}", class: 'govuk-checkboxes__input'
-            %label.govuk-label.govuk-checkboxes__label{for: "response_#{@name}_#{a['value']}"}= a['title']
-            - if a['value'] == 'something_else'
-              = f.text_field a['suggested'], class: 'govuk-input govuk-input--width-20'
+        .govuk-checkboxes
+          - @answers.each do |a|
+            .govuk-checkboxes__item
+              = check_box_tag "response[#{@name}][]", a['value'], @response.send(@name).include?(a['value']), id: "response_#{@name}_#{a['value']}", class: "govuk-checkboxes__input #{'display_hidden_checkbox' if a['value'] == 'something_else'}"
+              %label.govuk-label.govuk-checkboxes__label{for: "response_#{@name}_#{a['value']}"}= a['title']
+              - if a['value'] == 'something_else'
+                .hidden_field
+                  %br
+                  = f.text_field a['suggested'], class: 'govuk-input govuk-input--width-20 hidden_field', placeholder: 'Add optional details...'
 
-      %p
-        = submit_tag 'Save and continue', class: 'govuk-button'
+        %p
+          = submit_tag 'Save and continue', class: 'govuk-button'

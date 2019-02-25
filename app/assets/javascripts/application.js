@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require accordion
+//= require fields
 //= require govuk-frontend/all.js
 //= require public
 //= require_tree .

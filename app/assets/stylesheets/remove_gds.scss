@@ -45,6 +45,9 @@ footer {
     }
   }
 }
+.govuk-button--start:hover {
+  color: #fff !important;
+}
 
 .single_category {
   margin-bottom: 30px;
@@ -69,4 +72,8 @@ footer {
 
 .essex-logo {
   width: 30px;
+}
+
+.hidden_field, .display_none {
+  display: none;
 }
