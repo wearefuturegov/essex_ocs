@@ -13,6 +13,8 @@ staying_independent:
           value: adapt_home
         - title: I want to find out about technology for independent living (like alarms and sensors)
           value: tech
+        - title: Something else
+          value: something_else
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -26,6 +28,8 @@ staying_independent:
           value: professional
         - title: I want to see activities and groups in my local areas
           value: activities_and_groups
+        - title: Something else
+          value: something_else
 everyday_tasks:
   title: I need some help with everyday tasks (like cleaning or shopping)
   hint: Information, equipment and services to help you every day
@@ -41,6 +45,8 @@ everyday_tasks:
           value: meals_shopping
         - title: I'd like some help with home repairs and decorating
           value: home_repairs
+        - title: Something else
+          value: something_else
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -54,6 +60,8 @@ everyday_tasks:
           value: professional
         - title: I want to see activities and groups in my local areas
           value: activities_and_groups
+        - title: Something else
+          value: something_else
 out_and_about:
   title: I want to get out and about easier
   hint: From mobility aids to transportation - how to keep mobile
@@ -67,6 +75,8 @@ out_and_about:
           value: mobility_aids
         - title: I want to know more about transportation services
           value: transportation
+        - title: Something else
+          value: something_else
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -80,6 +90,8 @@ out_and_about:
           value: professional
         - title: I want to see activities and groups in my local areas
           value: activities_and_groups
+        - title: Something else
+          value: something_else
 fitness:
   title: I want to keep physically and mentally fit
   hint: Activities to keep healthy and lift your mood
@@ -93,6 +105,8 @@ fitness:
           value: fit_active
         - title: I want to socialise more and keep mentally fit
           value: socialise
+        - title: Something else
+          value: something_else
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -106,3 +120,8 @@ fitness:
           value: professional
         - title: I want to see activities and groups in my local areas
           value: activities_and_groups
+        - title: Something else
+          value: something_else
+not_sure:
+  title: Not sure
+  hint: Tell us if theres something else
