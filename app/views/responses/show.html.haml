@@ -9,6 +9,11 @@
         = help_category_result.label
       - else
         = help_category_result.label + ","
+
+  - if @response.help_category.include? 'something_else'
+    %span.govuk-info
+      You also chose '#{@response.suggested_help_category}'
+
   %p.govuk-body-l
     %strong
       You were most interested in:
@@ -17,6 +22,10 @@
         = @help_category_results.first.children.where(slug: info_type).first.label
       - else
         = @help_category_results.first.children.where(slug: info_type).first.label + ","
+
+  - if @response.info_type.include? 'something_else'
+    %span.govuk-info
+      You were also interested in '#{@response.suggested_info_type}'
 
     %hr
 
