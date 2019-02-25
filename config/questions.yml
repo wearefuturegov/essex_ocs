@@ -15,6 +15,7 @@ staying_independent:
           value: tech
         - title: Something else
           value: something_else
+          suggested: suggested_help_category
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -30,6 +31,7 @@ staying_independent:
           value: activities_and_groups
         - title: Something else
           value: something_else
+          suggested: suggested_info_type
 everyday_tasks:
   title: I need some help with everyday tasks (like cleaning or shopping)
   hint: Information, equipment and services to help you every day
@@ -47,6 +49,7 @@ everyday_tasks:
           value: home_repairs
         - title: Something else
           value: something_else
+          suggested: suggested_help_category
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -62,6 +65,7 @@ everyday_tasks:
           value: activities_and_groups
         - title: Something else
           value: something_else
+          suggested: suggested_info_type
 out_and_about:
   title: I want to get out and about easier
   hint: From mobility aids to transportation - how to keep mobile
@@ -77,6 +81,7 @@ out_and_about:
           value: transportation
         - title: Something else
           value: something_else
+          suggested: suggested_help_category
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -92,6 +97,7 @@ out_and_about:
           value: activities_and_groups
         - title: Something else
           value: something_else
+          suggested: suggested_info_type
 fitness:
   title: I want to keep physically and mentally fit
   hint: Activities to keep healthy and lift your mood
@@ -107,6 +113,7 @@ fitness:
           value: socialise
         - title: Something else
           value: something_else
+          suggested: suggested_help_category
     -
       title: Great. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
@@ -122,6 +129,7 @@ fitness:
           value: activities_and_groups
         - title: Something else
           value: something_else
+          suggested: suggested_info_type
 not_sure:
   title: Not sure
   hint: Tell us if theres something else
