@@ -1,25 +1,28 @@
-%span.govuk-caption-xl
-  Step 1 of 4
-%span.govuk-caption-l
-  We’ll ask you a few questions that’ll help us find the information you need.
+#firstQuestion
+  %span.govuk-caption-xl
+    Step 1 of 4
+  %span.govuk-caption-l
+    We’ll ask you a few questions that’ll help us find the information you need.
 
-= form_for @response do |f|
-  = hidden_field_tag :next_step, @next_step
+  = form_for @response, class: 'validation' do |f|
+    = hidden_field_tag :next_step, @next_step
+    .form_errors.display_none
+      %h4 Please select an option to continue
 
-  .govuk-form-group
-    %fieldset.govuk-fieldset{"aria-describedby" => "sign-in-hint"}
-      %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
-        %h1.govuk-fieldset__heading
-          Can you pick a statement that best describes what you need?
-      .govuk-radios
-        - @questions.each do |k, q|
-          .govuk-radios__item.verticle_align
-            = f.radio_button :category, k, 'aria-describedby' => "#{k}-item-hint", class: "govuk-radios__input #{'display_hidden' if k == 'not_sure'}"
-            %label.govuk-label.govuk-radios__label.govuk-label--s{for: "response_category_#{k}"}= q['title']
-            %span.govuk-hint.govuk-radios__hint{id: "#{k}-item-hint"}= q['hint']
-            - if k == 'not_sure'
-              = f.text_field :suggested_category, class: 'govuk-input govuk-input--width-10 hidden_field'
+    .govuk-form-group
+      %fieldset.govuk-fieldset{"aria-describedby" => "sign-in-hint"}
+        %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
+          %h1.govuk-fieldset__heading
+            Can you pick a statement that best describes what you need?
+        .govuk-radios
+          - @questions.each do |k, q|
+            .govuk-radios__item.verticle_align
+              = f.radio_button :category, k, 'aria-describedby' => "#{k}-item-hint", class: "govuk-radios__input #{'display_hidden' if k == 'not_sure'}"
+              %label.govuk-label.govuk-radios__label.govuk-label--s{for: "response_category_#{k}"}= q['title']
+              %span.govuk-hint.govuk-radios__hint{id: "#{k}-item-hint"}= q['hint']
+              - if k == 'not_sure'
+                = f.text_field :suggested_category, class: 'govuk-input govuk-input--width-10 hidden_field'
 
-    %p
-      = submit_tag 'Save and continue', class: 'govuk-button'
+      %p
+        = submit_tag 'Save and continue', class: 'govuk-button'
 
