@@ -1,7 +1,7 @@
 %span.govuk-caption-xl
   Step 1 of 4
 %span.govuk-caption-l
-  We’ll ask you a few questions that’ll help us find the information you need.
+  We’ll ask you a few questions that will help us find the information you need
 
 = form_for @response do |f|
   = hidden_field_tag :next_step, @next_step
@@ -10,7 +10,7 @@
     %fieldset.govuk-fieldset{"aria-describedby" => "sign-in-hint"}
       %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
         %h1.govuk-fieldset__heading
-          Can you pick a statement that best describes what you need?
+          Choose a statement that best describes what you want to do
       .govuk-radios
         - @questions.each do |k, q|
           .govuk-radios__item.verticle_align

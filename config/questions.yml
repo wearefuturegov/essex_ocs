@@ -3,7 +3,7 @@ staying_independent:
   hint: Technology, tips and alterations to make it easier for you to stay at home
   steps:
     -
-      title: Thanks. You chose staying independent. Can you now tick any of these statements that apply to you
+      title: You chose staying independent. Can you now choose any of these statements that apply to you
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -17,7 +17,7 @@ staying_independent:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Great. And what kind of help are you looking for?
+      title: OK. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
@@ -33,11 +33,11 @@ staying_independent:
           value: something_else
           suggested: suggested_info_type
 everyday_tasks:
-  title: I need some help with everyday tasks (like cleaning or shopping)
+  title: I want some help with everyday tasks (like cleaning or shopping)
   hint: Information, equipment and services to help you every day
   steps:
     -
-      title: Thanks. You chose help with everyday tasks. Can you now tick any of these statements that apply to you
+      title: You chose help with everyday tasks. Can you now choose any of these statements that apply to you
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -51,7 +51,7 @@ everyday_tasks:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Great. And what kind of help are you looking for?
+      title: OK. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
@@ -71,7 +71,7 @@ out_and_about:
   hint: From mobility aids to transportation - how to keep mobile
   steps:
     -
-      title: Thanks. You chose getting out and about. Can you now tick any of these statements that apply to you
+      title: You chose getting out and about. Can you now choose any of these statements that apply to you
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -83,7 +83,7 @@ out_and_about:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Great. And what kind of help are you looking for?
+      title: OK. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
@@ -103,7 +103,7 @@ fitness:
   hint: Activities to keep healthy and lift your mood
   steps:
     -
-      title: Thanks. You chose keeping mentally and physically well. Can you now tick any of these statements that apply to you
+      title: You chose keeping mentally and physically well. Can you now choose any of these statements that apply to you
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -115,7 +115,7 @@ fitness:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Great. And what kind of help are you looking for?
+      title: OK. And what kind of help are you looking for?
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
@@ -131,5 +131,5 @@ fitness:
           value: something_else
           suggested: suggested_info_type
 not_sure:
-  title: Not sure
-  hint: Tell us if theres something else
+  title: I’m not sure
+  hint: If there’s something else you are looking for, please type it in the box below

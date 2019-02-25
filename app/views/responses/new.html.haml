@@ -1,12 +1,14 @@
 %h1.govuk-heading-xl
-  First things first: what's your name?
+  Before we begin: what's your name?
 %h2.govuk-heading-l
   Why do we need this?
 %p.govuk-body
-  By giving us your name it means that we can pass your answers on to your Navigator, who can then chat to you face to face about your options.
+  We use your name to share your answers with your Navigator.
+  This is so they can talk to you face to face about your options.
+
 
 %span.govuk-hint
-  We won't share these answers with anyone else.
+  We won't share this information with anyone else.
 
 = form_for @response, url: {action: "create"} do |f|
 
