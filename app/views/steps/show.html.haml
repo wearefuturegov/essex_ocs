@@ -4,7 +4,7 @@
   - else
     = link_to 'Back', journeys_path, class: 'govuk-back-link'
 
-  %span.govuk-caption-xl
+  %span.govuk-caption-l
     = "Step #{@current_step+1} of #{@step_count}"
   = form_for @response do |f|
     = hidden_field_tag :next_step, @next_step
@@ -14,7 +14,7 @@
           %h1.govuk-fieldset__heading= @title
         %span.govuk-hint{id: "#{@name}-hint"}= @hint
         .form_errors.display_none
-          %h4 Please select an option to continue
+          %h4 Please select at least one option to continue
 
         .govuk-checkboxes
           - @answers.each do |a|
