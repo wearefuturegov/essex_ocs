@@ -1,9 +1,7 @@
 %span.govuk-caption-l
   Step 1 of 4
-%h1.govuk-heading-l
-  Before we begin: what's your name?
-%span.govuk-hint.higher
-  We won't share this information with anyone else.
+%h1.govuk-heading-l.no-margin-bottom
+  What's your name?
 
 = form_for @response, url: {action: "create"} do |f|
 
@@ -31,6 +29,6 @@
 
 %h2.govuk-heading-m
   Why do we need this?
-%p.govuk-body
+%span.govuk-body
   We use your name to share your answers with your Navigator.
-  This is so they can talk to you face to face about your options.
+  This is so they can talk to you face to face about your options. We won't share this information with anyone else.
