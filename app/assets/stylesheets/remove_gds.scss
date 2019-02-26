@@ -85,3 +85,18 @@ footer {
 .govuk-hint.higher {
   margin-top: -25px;
 }
+
+.essex-details {
+  text-align: right;
+  margin-top: 30px;
+  img {
+    max-width: 100px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
