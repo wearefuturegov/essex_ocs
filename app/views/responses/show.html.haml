@@ -88,7 +88,7 @@
       .govuk-form-group
         = f.submit "Send", class: 'govuk-button'
 
-- if @response.category == 'not_sure'
+- if @response.category == 'not_sure' || @response.help_category == ["something_else"]
   %h2.govuk-heading-l
     We’re sorry we can’t find what you’re looking for
   %p
