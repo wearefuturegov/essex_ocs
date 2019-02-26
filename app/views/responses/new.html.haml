@@ -1,8 +1,8 @@
-%span.govuk-caption-xl
+%span.govuk-caption-l
   Step 1 of 4
 %h1.govuk-heading-l
   Before we begin: what's your name?
-%span.govuk-hint
+%span.govuk-hint.higher
   We won't share this information with anyone else.
 
 = form_for @response, url: {action: "create"} do |f|
@@ -27,7 +27,7 @@
       = f.label :surname, "Last name", class: 'govuk-label'
       = f.text_field :surname, class: 'govuk-input govuk-input--width-10'
     .govuk-form-group
-      = f.submit "Continue", class: 'govuk-button'
+      = f.submit "Continue", class: 'govuk-button no-margin'
 
 %h2.govuk-heading-m
   Why do we need this?

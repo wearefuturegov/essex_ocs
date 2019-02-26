@@ -1,103 +1,103 @@
-- if @help_category_results.size > 0
-  %h1.govuk-heading-xl
-    Your results
-  %p.govuk-body-l
-    %strong
-      You chose:
-    - @help_category_results.each do |help_category_result|
-      - if @help_category_results.last == help_category_result
-        = help_category_result.label
-      - else
-        = help_category_result.label + ","
-
-  - if @response.help_category.include? 'something_else' && @response.suggested_help_category
-    %p.govuk-info
-      You also chose '#{@response.suggested_help_category}'
-
-  - if @response.info_type == ['something_else']
-    We're sorry we don't have the type of information that you are looking for. Below is all of the the information that we do have for your choices.
-  - else
+#resultsPage
+  - if @help_category_results.size > 0
+    %h1.govuk-heading-xl
+      Your results
     %p.govuk-body-l
       %strong
-        You were most interested in:
-      - @info_types.each do |info_type|
-        - if @info_types.last == info_type
-          = @help_category_results.first.children.where(slug: info_type).first.label
+        You chose:
+      - @help_category_results.each do |help_category_result|
+        - if @help_category_results.last == help_category_result
+          = help_category_result.label
         - else
-          = @help_category_results.first.children.where(slug: info_type).first.label + ","
+          = help_category_result.label + ","
 
-  - if @response.info_type.include? 'something_else' && @response.suggested_info_type
-    %p.govuk-info
-      You were also interested in '#{@response.suggested_info_type}'
+    - if @response.help_category.include? 'something_else' && @response.suggested_help_category
+      %p.govuk-info
+        You also chose '#{@response.suggested_help_category}'
 
-    %hr
+    - if @response.info_type == ['something_else']
+      We're sorry we don't have the type of information that you are looking for. Below is all of the the information that we do have for your choices.
+    - else
+      %p.govuk-body-l
+        %strong
+          You were most interested in:
+        - @info_types.each do |info_type|
+          - if @info_types.last == info_type
+            = @help_category_results.first.children.where(slug: info_type).first.label
+          - else
+            = @help_category_results.first.children.where(slug: info_type).first.label + ","
 
-  - @help_category_results.each do |help_category_result|
-    .single_category
-      %h2.govuk-heading-l
-        = help_category_result.label
-      %p.govuk-body
-        - help_category_result.fragments.each do |fragment|
-          %p.govuk-body
-            = fragment.content.html_safe
-      .accordion
-        - if @response.info_type == ['something_else']
-          - help_category_result.children.each do |info_type|
-            - unless info_type.slug == 'more_help'
-              .accord-single
-                .accord-toggle
-                  %h2.govuk-heading-m
-                    = info_type.label
-                    =fa_icon 'chevron-down'
-                .accord-cont
-                  - info_type.fragments.each do |fragment|
-                    = fragment.content.html_safe
-        - else
-          - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
-            .accord-single
-              .accord-toggle
-                %h2.govuk-heading-m
-                  = info_type.label
-                  =fa_icon 'chevron-down'
-              .accord-cont
-                - info_type.fragments.each do |fragment|
-                  = fragment.content.html_safe
+    - if @response.info_type.include? 'something_else' && @response.suggested_info_type
+      %p.govuk-info
+        You were also interested in '#{@response.suggested_info_type}'
 
-        - more_help = help_category_result.children.where(slug: 'more_help').first
-        - unless more_help.fragments.count == 1 && more_help.fragments.first.content == ""
-          .accord-single
-            .accord-toggle
-              %h2.govuk-heading-m
-                More help
-                =fa_icon 'chevron-down'
-            .accord-cont
-              - more_help.fragments.each do |fragment|
-                = fragment.content.html_safe
-    - unless help_category_result == @help_category_results.last
       %hr
 
-  .save_for_later
+    - @help_category_results.each do |help_category_result|
+      .single_category
+        %h2.govuk-heading-l
+          = help_category_result.label
+        %p.govuk-body
+          - help_category_result.fragments.each do |fragment|
+            %p.govuk-body
+              = fragment.content.html_safe
+        #results-list
+          - if @response.info_type == ['something_else']
+            - help_category_result.children.each do |info_type|
+              - unless info_type.slug == 'more_help'
+                .single-result
+                  .result-title
+                    %h2.govuk-heading-m
+                      = info_type.label
+                  .result-content
+                    - info_type.fragments.each do |fragment|
+                      = fragment.content.html_safe
+          - else
+            - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
+              .single-result
+                .result-title
+                  %h2.govuk-heading-m
+                    = info_type.label
+                .result-content
+                  - info_type.fragments.each do |fragment|
+                    = fragment.content.html_safe
+
+          - more_help = help_category_result.children.where(slug: 'more_help').first
+          - unless more_help.fragments.count == 1 && more_help.fragments.first.content == ""
+            .single-result
+              .result-title
+                %h2.govuk-heading-m
+                  More help
+              .result-content
+                - more_help.fragments.each do |fragment|
+                  = fragment.content.html_safe
+      - unless help_category_result == @help_category_results.last
+        %hr
+
+    .save_for_later
+      %h2.govuk-heading-m
+        Want to save this for later?
+      Type your phone number in the box below and we'll send you a link to these results
+      %span.govuk-hint
+        We won't use this information for anything else.
+      #validate_mobile
+        .form_errors.display_none
+          %h4 Please check your phone number is correct
+        = form_for @response, url: response_send_results_sms_path(@response.id), method: :patch do |f|
+          .govuk-form-group
+            = f.telephone_field :phone_number, class: 'govuk-input govuk-input--width-10 '
+          .govuk-form-group
+            = f.submit "Send", class: 'govuk-button no-margin'
+
+  - if @response.category == 'not_sure' || @response.help_category == ["something_else"]
     %h2.govuk-heading-l
-      Want to save this for later?
-    Type your phone number in the box below and we'll send you a link to these results
-    %span.govuk-hint
-      We won't use this information for anything else.
+      We’re sorry we can’t find what you’re looking for
+    %p
+      We’re sorry you can’t find what you’re looking for right now.
+    %p
+      If you want to talk to your Navigator face to face about this, you can contact them on:
 
-    = form_for @response, url: response_send_results_sms_path(@response.id), method: :patch do |f|
-      .govuk-form-group
-        = f.telephone_field :phone_number, class: 'govuk-input govuk-input--width-10 '
-      .govuk-form-group
-        = f.submit "Send", class: 'govuk-button'
-
-- if @response.category == 'not_sure' || @response.help_category == ["something_else"]
-  %h2.govuk-heading-l
-    We’re sorry we can’t find what you’re looking for
-  %p
-    We’re sorry you can’t find what you’re looking for right now.
-  %p
-    If you want to talk to your Navigator face to face about this, you can contact them on:
-
-%h2.govuk-heading-l
-  = @results.where(slug: 'more_help_generic').first.label
-- @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
-  = fragement.content.html_safe
+  %h2.govuk-heading-m
+    = @results.where(slug: 'more_help_generic').first.label
+  - @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
+    = fragement.content.html_safe

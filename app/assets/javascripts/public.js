@@ -5,6 +5,7 @@ $(function() {
   $('#firstQuestion').blankValidation('radio');
   $('#stepQuestion_3').blankValidation('checkbox');
   $('#stepQuestion_4').blankValidation('checkbox');
+  $('#validate_mobile').blankValidation('tel');
 });
 
 

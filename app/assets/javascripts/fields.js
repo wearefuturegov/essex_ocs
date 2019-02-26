@@ -23,12 +23,21 @@ $.fn.displayHiddenCheckbox = function() {
 
 $.fn.blankValidation = function(inputType = 'radio') {
   var form = this.find($('form'));
-  var count = $('input[type=' + inputType + ']').length;
+  if (inputType == 'tel') {
+    form.submit(function(e) {
+      if (!$("input[type=" + inputType + "]").val()) {
+        $('.form_errors').removeClass('display_none');
+        return false;
+      }
+    });
+  } else {
+    var count = $('input[type=' + inputType + ']').length;
 
-  form.submit(function(e) {
-    if (!$("input[type=" + inputType + "]:checked").val()) {
-      $('.form_errors').removeClass('display_none');
-      return false;
-    }
-  });
+    form.submit(function(e) {
+      if (!$("input[type=" + inputType + "]:checked").val()) {
+        $('.form_errors').removeClass('display_none');
+        return false;
+      }
+    });
+  }
 };

@@ -23,6 +23,7 @@ footer {
   border-radius: 10px;
 }
 .govuk-button {
+  margin-top: 20px;
   background: $brand;
   border-radius: 5px;
   box-shadow: none;
@@ -43,6 +44,9 @@ footer {
     &:hover {
       background: lighten($brand, 20);
     }
+  }
+  &.no-margin {
+    margin-top: 0;
   }
 }
 .govuk-button--start:hover {
@@ -76,4 +80,8 @@ footer {
 
 .hidden_field, .display_none {
   display: none;
+}
+
+.govuk-hint.higher {
+  margin-top: -25px;
 }
