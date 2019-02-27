@@ -43,7 +43,7 @@ class ResponsesController < ApplicationController
   def send_results_sms
     @response = Response.find(params[:response_id])
     @response.update(response_params)
-    body = "Hello #{@response.forename}. You asked us to text some recommendations from the Home and healthy assistant. Just click on the link in this message to see what info and services we've found for you. https://homehealthy.co.uk/responses/#{@response.id}?sms=true"
+    body = "Hello #{@response.forename}. You asked us to text some recommendations from the Home and healthy assistant. Just click on the link in this message to see what info and services we've found for you. https://wwww.homehealthy.co.uk/responses/#{@response.id}?sms=true"
     TwilioService.send_sms(body, @response.phone_number)
     redirect_to response_path(@response)
   end
