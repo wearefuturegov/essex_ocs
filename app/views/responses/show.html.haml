@@ -89,6 +89,11 @@
           .govuk-form-group
             = f.submit "Send", class: 'govuk-button no-margin'
 
+    %h2.govuk-heading-m
+      = @results.where(slug: 'more_help_generic').first.label
+    - @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
+      = fragement.content.html_safe
+
   - if @response.category == 'not_sure' || @response.help_category == ["something_else"]
     %h2.govuk-heading-l
       We’re sorry we can’t find what you’re looking for
@@ -96,8 +101,3 @@
       We’re sorry you can’t find what you’re looking for right now.
     %p
       If you want to talk to your Navigator face to face about this, you can contact them on:
-
-  %h2.govuk-heading-m
-    = @results.where(slug: 'more_help_generic').first.label
-  - @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
-    = fragement.content.html_safe
