@@ -1,3 +1,4 @@
+$brand: #682558;
 #resultsPage {
   .govuk-heading-xl {
     margin-bottom: 25px;
@@ -32,5 +33,20 @@
     margin-bottom: 50px;
     border-bottom: 1px solid #333;
     padding-bottom: 25px;
+  }
+}
+
+
+#toTop {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: $brand;
+  color: #fff;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  &:hover {
+    cursor: pointer;
   }
 }
