@@ -15,6 +15,12 @@
     margin-bottom: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid #333;
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .single_category {
     margin-bottom: 75px;
