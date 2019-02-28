@@ -2,39 +2,35 @@
   - if @help_category_results.size > 0
     %h1.govuk-heading-xl
       Your results
-    %p.govuk-body-l
-      %strong
-        You chose:
-      - @help_category_results.each do |help_category_result|
-        - if @help_category_results.last == help_category_result
-          = help_category_result.label
-        - else
-          = help_category_result.label + ","
-
-    - if @response.help_category.include? 'something_else' && @response.suggested_help_category
-      %p.govuk-info
-        You also chose '#{@response.suggested_help_category}'
-
-    - if @response.info_type == ['something_else']
-      We're sorry we don't have the type of information that you are looking for. Below is all of the the information that we do have for your choices.
-    - else
-      %p.govuk-body-l
+    #contents
+      %span.govuk-body-l
         %strong
-          You were most interested in:
-        - @info_types.each do |info_type|
-          - if @info_types.last == info_type
-            = @help_category_results.first.children.where(slug: info_type).first.label
-          - else
-            = @help_category_results.first.children.where(slug: info_type).first.label + ","
+          Contents:
+      %ul
+        - @help_category_results.each do |help_category_result|
+          %li
+            %a{href: '#' + help_category_result.label.parameterize }= help_category_result.label
+            %ul
+              - @info_types.each do |info_type|
+                %li
+                  %a{href: '#' + help_category_result.label.parameterize + '_' + @help_category_results.first.children.where(slug: info_type).first.label.parameterize }
+                    = @help_category_results.first.children.where(slug: info_type).first.label
 
-    - if @response.info_type.include? 'something_else' && @response.suggested_info_type
-      %p.govuk-info
-        You were also interested in '#{@response.suggested_info_type}'
+        - if @response.help_category.include? 'something_else' && @response.suggested_help_category
+          %li.govuk-info
+            You also were interested in '#{@response.suggested_help_category}'
 
-      %hr
+
+      - if @response.info_type == ['something_else']
+        We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices.
+
+      - if @response.info_type.include? 'something_else' && @response.suggested_info_type
+        %p.govuk-info
+          You were also interested in '#{@response.suggested_info_type}'
+
 
     - @help_category_results.each do |help_category_result|
-      .single_category
+      .single_category{id: help_category_result.label.parameterize }
         %h2.govuk-heading-l
           = help_category_result.label
         %p.govuk-body
@@ -45,7 +41,7 @@
           - if @response.info_type == ['something_else']
             - help_category_result.children.each do |info_type|
               - unless info_type.slug == 'more_help'
-                .single-result
+                .single-result{id: help_category_result.label.parameterize + '_' + info_type.label.parameterize }
                   .result-title
                     %h2.govuk-heading-m
                       = info_type.label
@@ -55,7 +51,7 @@
           - else
             - help_category_result.children.where(slug: @response["info_type"]).each do |info_type|
               .single-result
-                .result-title
+                .result-title{id: help_category_result.label.parameterize + '_' + info_type.label.parameterize }
                   %h2.govuk-heading-m
                     = info_type.label
                 .result-content
@@ -72,7 +68,7 @@
                 - more_help.fragments.each do |fragment|
                   = fragment.content.html_safe
       - unless help_category_result == @help_category_results.last
-        %hr
+        / %hr
 
     .save_for_later
       %h2.govuk-heading-m
@@ -88,7 +84,7 @@
             = f.telephone_field :phone_number, class: 'govuk-input govuk-input--width-10 '
           .govuk-form-group
             = f.submit "Send", class: 'govuk-button no-margin'
-
+    %br
     %h2.govuk-heading-m
       Need to speak to someone?
     %p If you feel like you are having difficulties with the Home and Healthy service or just feel like you need to talk to someone you can contact the Navigator service on:
