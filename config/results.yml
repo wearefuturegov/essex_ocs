@@ -493,7 +493,7 @@ tech:
         components:
           - type: text
             content: You can buy your own alarms, sensors and monitors.
-      
+
       - type: paragraph
         components:
           - type: text
@@ -514,7 +514,7 @@ tech:
             label: Contact your local council
           - type: text
             content: to discuss your care and support needs.
-        
+
   professional: &tech_services
     title: services
     sections:

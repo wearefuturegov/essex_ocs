@@ -67,7 +67,7 @@
             .single-result
               .result-title
                 %h2.govuk-heading-m
-                  More help
+                  Need more help?
               .result-content
                 - more_help.fragments.each do |fragment|
                   = fragment.content.html_safe
@@ -90,14 +90,14 @@
             = f.submit "Send", class: 'govuk-button no-margin'
 
     %h2.govuk-heading-m
-      = @results.where(slug: 'more_help_generic').first.label
-    - @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
-      = fragement.content.html_safe
+      Need to speak to someone?
+    %p If you feel like you are having difficulties with the Home and Healthy service or just feel like you need to talk to someone you can contact the Navigator service on:
+    /   = @results.where(slug: 'more_help_generic').first.label
+    / - @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
+    /   = fragement.content.html_safe
 
   - if @response.category == 'not_sure' || @response.help_category == ["something_else"]
     %h2.govuk-heading-l
       We’re sorry we can’t find what you’re looking for
     %p
-      We’re sorry you can’t find what you’re looking for right now.
-    %p
-      If you want to talk to your Navigator face to face about this, you can contact them on:
+      If you feel like you are having difficulties with the Home and Healthy service or just feel like you need to talk to someone you can contact the Navigator service on:
