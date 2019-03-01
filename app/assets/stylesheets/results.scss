@@ -1,3 +1,4 @@
+$brand: #682558;
 #resultsPage {
   .govuk-heading-xl {
     margin-bottom: 25px;
@@ -15,8 +16,45 @@
     margin-bottom: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid #333;
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .single_category {
+    margin-bottom: 75px;
+  }
+  .govuk-heading-l {
+    margin-bottom: 15px;
+  }
+  #contents {
     margin-bottom: 50px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 25px;
+  }
+  li.bold {
+    a {
+      font-weight: 700;
+    }
+    ul a {
+      font-weight: 400;
+    }
+  }
+}
+
+
+#toTop {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: $brand;
+  color: #fff;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  &:hover {
+    cursor: pointer;
   }
 }

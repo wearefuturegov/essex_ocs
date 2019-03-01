@@ -6,6 +6,19 @@ $(function() {
   $('#stepQuestion_3').blankValidation('checkbox');
   $('#stepQuestion_4').blankValidation('checkbox');
   $('#validate_mobile').blankValidation('tel');
+  $("#toTop").click(function() {
+    $("html, body").animate({scrollTop: 0}, 750);
+  });
+});
+
+
+
+$(window).scroll(function() {
+  if ($(this).scrollTop()) {
+    $('#toTop').fadeIn();
+  } else {
+    $('#toTop').fadeOut();
+  }
 });
 
 
