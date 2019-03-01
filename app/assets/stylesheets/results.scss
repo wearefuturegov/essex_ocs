@@ -34,6 +34,14 @@ $brand: #682558;
     border-bottom: 1px solid #333;
     padding-bottom: 25px;
   }
+  li.bold {
+    a {
+      font-weight: 700;
+    }
+    ul a {
+      font-weight: 400;
+    }
+  }
 }
 
 

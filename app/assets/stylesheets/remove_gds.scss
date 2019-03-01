@@ -1,5 +1,5 @@
 $brand: #682558;
-.govuk-body a, .govuk-link {
+.govuk-body a, .govuk-link, .govuk-link:link {
   color: $brand;
   &:hover {
     color: darken($brand, 10);
