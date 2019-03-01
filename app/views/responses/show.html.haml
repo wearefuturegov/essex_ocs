@@ -3,6 +3,9 @@
     %h1.govuk-heading-xl
       Your results
     #contents
+      - if @response.info_type == ['something_else']
+        %p We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices.
+
       %span.govuk-body-l
         %strong
           Contents:
@@ -27,8 +30,6 @@
             You also were interested in '#{@response.suggested_help_category}'
 
 
-      - if @response.info_type == ['something_else']
-        We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices.
 
       - if @response.info_type.include? 'something_else' && @response.suggested_info_type
         %p.govuk-info
