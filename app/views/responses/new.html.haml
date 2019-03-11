@@ -19,10 +19,6 @@
   %fieldset.govuk-fieldset
     %legend.govuk-fieldset__legend.govuk-fieldset__legend--l
     .govuk-form-group
-      / = f.label :forename, "Participant number", class: 'govuk-label'
-      = f.text_field :forename, class: 'govuk-input govuk-input--width-10'
-    .govuk-form-group.hidden
-      = f.label :surname, "Last name", class: 'govuk-label'
-      = f.text_field :surname, :value => "lastname", class: 'govuk-input govuk-input--width-10'
+      = f.text_field :participant_number, class: 'govuk-input govuk-input--width-10'
     .govuk-form-group
       = f.submit "Continue", class: 'govuk-button no-margin'
