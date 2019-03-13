@@ -4,7 +4,7 @@ describe ResponsesController, type: :controller do
 
   describe 'create' do
     let(:response) { Response.last }
-    before { post :create, params: { response: { category: 'some_category' } } }
+    before { post :create, params: { response: { category: 'some_category', participant_number: 'testing123' } } }
 
     it 'creates a response' do
       expect(Response.count).to eq(1)
