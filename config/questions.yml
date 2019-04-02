@@ -1,35 +1,35 @@
 staying_independent:
-  title: I want to make sure I can stay independent at home
+  title: I want to make sure my home is right for my needs
   hint: Technology, tips and alterations to make it easier for you to stay at home
   steps:
     -
-      title: You chose staying independent. Can you now choose any of these statements that apply to you
+      title: Thank you - you chose staying independent. Now please choose any of these things you might be interested in (you can choose more than one)
       hint: You can choose more than one
       name: 'help_category'
       answers:
-        - title: I want to avoid accidents at home
+        - title: Avoiding accidents at home
           value: avoid_accidents
-        - title: I want to adapt my home to suit my needs
+        - title: Adapting my home to suit my needs
           value: adapt_home
-        - title: I want to find out about technology for independent living (like alarms and sensors)
+        - title: Technology and gadgets (like alarms and sensors)
           value: tech
-        - title: Something else
+        - title: None of these
           value: something_else
           suggested: suggested_help_category
     -
-      title: OK. And what kind of help are you looking for?
+      title: Thank you. And finally - what would you like to look for? (again, you can choose as many as you like)
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: I want to see information and advice that I can look at myself
+        - title: Information and advice that I can look at myself
           value: myself
-        - title: I want to see some types of gadgets and equipment that can help me
+        - title: Gadgets and equipment
           value: equipment
-        - title: I want to see what type of professional help I could get with this
+        - title: Services and local support
           value: professional
-        - title: I want to find out about local support
+        - title: Activities in my area
           value: activities_and_groups
-        - title: Something else
+        - title: None of these
           value: something_else
           suggested: suggested_info_type
 everyday_tasks:
@@ -37,27 +37,27 @@ everyday_tasks:
   hint: Information, equipment and services to help you every day
   steps:
     -
-      title: You chose help with everyday tasks. Can you now choose any of these statements that apply to you
+      title: Thank you - you chose help with everyday tasks. Now please choose any of these things you might be interested in (you can choose more than one)
       hint: You can choose more than one
       name: 'help_category'
       answers:
-        - title: I'd like some help with cleaning and housework or personal care (like washing and dressing)
+        - title: Help with cleaning, housework or personal care (like washing and dressing)
           value: personal_care
-        - title: I'd like some help with meals and shopping
+        - title: Help with meals and shopping
           value: meals_shopping
-        - title: I'd like some help with home repairs and decorating
+        - title: Help with home repairs and decorating
           value: home_repairs
-        - title: Something else
+        - title: None of these
           value: something_else
           suggested: suggested_help_category
     -
-      title: OK. And what kind of help are you looking for?
+      title: Thank you. And finally - what would you like to look for? (again, you can choose as many as you like)
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: I want to see information and advice that I can look at myself
+        - title: Information and advice that I can look at myself
           value: myself
-        - title: I want to see some types of gadgets and equipment that can help me
+        - title: Gadgets and equipment
           value: equipment
         - title: I want to see what type of professional help I could get with this
           value: professional
@@ -71,25 +71,25 @@ out_and_about:
   hint: From mobility aids to transportation - how to keep mobile
   steps:
     -
-      title: You chose getting out and about. Can you now choose any of these statements that apply to you
+      title: Thank you - you chose getting out and about. Now please choose any of these things you might be interested in (you can choose more than one)
       hint: You can choose more than one
       name: 'help_category'
       answers:
-        - title: I want to know more about wheelchairs and mobility aids
+        - title: Wheelchairs and mobility aids
           value: mobility_aids
-        - title: I want to know more about transportation services
+        - title: Transportation services
           value: transportation
-        - title: Something else
+        - title: None of these
           value: something_else
           suggested: suggested_help_category
     -
-      title: OK. And what kind of help are you looking for?
+      title: Thank you. And finally - what would you like to look for? (again, you can choose as many as you like)
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: I want to see information and advice that I can look at myself
+        - title: Information and advice that I can look at myself
           value: myself
-        - title: I want to see some types of gadgets and equipment that can help me
+        - title: Gadgets and equipment
           value: equipment
         - title: I want to see what type of professional help I could get with this
           value: professional
@@ -103,25 +103,25 @@ fitness:
   hint: Activities to keep healthy and lift your mood
   steps:
     -
-      title: You chose keeping mentally and physically well. Can you now choose any of these statements that apply to you
+      title: Thank you - you chose keeping mentally and physically well. Now please choose any of these things you might be interested in (you can choose more than one)
       hint: You can choose more than one
       name: 'help_category'
       answers:
-        - title: I want to find some ways to keep fit and active
+        - title: Ways to keep active
           value: fit_active
-        - title: I want to socialise more and keep mentally fit
+        - title: Socialising and keeping mentally fit
           value: socialise
-        - title: Something else
+        - title: None of these
           value: something_else
           suggested: suggested_help_category
     -
-      title: OK. And what kind of help are you looking for?
+      title: Thank you. And finally - what would you like to look for? (again, you can choose as many as you like)
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: I want to see information and advice that I can look at myself
+        - title: Information and advice that I can look at myself
           value: myself
-        - title: I want to see some types of gadgets and equipment that can help me
+        - title: Gadgets and equipment
           value: equipment
         - title: I want to see what type of professional help I could get with this
           value: professional
@@ -131,5 +131,5 @@ fitness:
           value: something_else
           suggested: suggested_info_type
 not_sure:
-  title: I’m not sure
+  title: None of these
   hint: If there’s something else you are looking for, please type it in the box below

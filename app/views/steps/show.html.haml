@@ -12,7 +12,7 @@
       %fieldset.govuk-fieldset{"aria-describedby" => "#{@name}-hint"}
         %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
           %h1.govuk-fieldset__heading= @title
-        %span.govuk-hint{id: "#{@name}-hint"}= @hint
+        %span.govuk-hint{id: "#{@name}-hint"}=# @hint
         .form_errors.display_none
           %h4 Please select at least one option to continue
 
@@ -24,7 +24,10 @@
               - if a['value'] == 'something_else'
                 .hidden_field
                   %br
-                  = f.text_field a['suggested'], class: 'govuk-input govuk-input--width-20 hidden_field', placeholder: 'Add optional details...'
+                  = f.text_field a['suggested'], class: 'govuk-input govuk-input--width-20 hidden_field', placeholder: ' tell us what you were looking for'
 
         %p
-          = submit_tag 'Save and continue', class: 'govuk-button'
+          - if @next_step.present?
+            = submit_tag 'Save and continue', class: 'govuk-button'
+          - else
+            = submit_tag 'See my recommendations', class: 'govuk-button'
