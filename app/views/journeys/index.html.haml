@@ -23,7 +23,7 @@
               %label.govuk-label.govuk-radios__label.govuk-label--s{for: "response_category_#{k}"}= q['title']
               %span.govuk-hint.govuk-radios__hint{id: "#{k}-item-hint"}= q['hint']
               - if k == 'not_sure'
-                = f.text_field :suggested_category, class: 'govuk-input govuk-input--width-20 hidden_field', placeholder: ' tell us what you were looking for'
+                = f.text_field :suggested_category, class: 'govuk-input govuk-input--width-20 hidden_field', placeholder: " tell us what you're looking for"
 
         %p
           = submit_tag 'Save and continue', class: 'govuk-button'

@@ -8,7 +8,11 @@ class ResponsesController < ApplicationController
   def create
     @response = Response.create(response_params)
     session[:response_id] = @response.id
-    redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
+    if params[:next_step].present? && @response.category != 'not_sure' && @response.help_category != ["something_else"]
+      redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
+    else
+      render :show
+    end
   end
 
   def update

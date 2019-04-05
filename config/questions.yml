@@ -13,7 +13,7 @@ staying_independent:
           value: adapt_home
         - title: Technology and gadgets (like alarms and sensors)
           value: tech
-        - title: None of these
+        - title: Something else
           value: something_else
           suggested: suggested_help_category
     -
@@ -23,13 +23,13 @@ staying_independent:
       answers:
         - title: Information and advice that I can look at myself
           value: myself
-        - title: Gadgets and equipment
+        - title: Gadgets and equipment that I can buy
           value: equipment
-        - title: Services and local support
-          value: professional
-        - title: Activities in my area
-          value: activities_and_groups
-        - title: None of these
+        - title: Local support and services that I can contact
+          value: local_services
+        - title: Help with payment that I might be eligible for
+          value: payment
+        - title: Something else
           value: something_else
           suggested: suggested_info_type
 everyday_tasks:
@@ -47,7 +47,7 @@ everyday_tasks:
           value: meals_shopping
         - title: Help with home repairs and decorating
           value: home_repairs
-        - title: None of these
+        - title: Something else
           value: something_else
           suggested: suggested_help_category
     -
@@ -57,12 +57,12 @@ everyday_tasks:
       answers:
         - title: Information and advice that I can look at myself
           value: myself
-        - title: Gadgets and equipment
+        - title: Gadgets and equipment that I can buy
           value: equipment
-        - title: I want to see what type of professional help I could get with this
-          value: professional
-        - title: I want to find out about local support
-          value: activities_and_groups
+        - title: Local support and services that I can contact
+          value: local_services
+        - title: Help with payment that I might be eligible for
+          value: payment
         - title: Something else
           value: something_else
           suggested: suggested_info_type
@@ -79,7 +79,7 @@ out_and_about:
           value: mobility_aids
         - title: Transportation services
           value: transportation
-        - title: None of these
+        - title: Something else
           value: something_else
           suggested: suggested_help_category
     -
@@ -89,12 +89,12 @@ out_and_about:
       answers:
         - title: Information and advice that I can look at myself
           value: myself
-        - title: Gadgets and equipment
+        - title: Gadgets and equipment that I can buy
           value: equipment
-        - title: I want to see what type of professional help I could get with this
-          value: professional
-        - title: I want to find out about local support
-          value: activities_and_groups
+        - title: Local support and services that I can contact
+          value: local_services
+        - title: Help with payment that I might be eligible for
+          value: payment
         - title: Something else
           value: something_else
           suggested: suggested_info_type
@@ -111,7 +111,7 @@ fitness:
           value: fit_active
         - title: Socialising and keeping mentally fit
           value: socialise
-        - title: None of these
+        - title: Something else
           value: something_else
           suggested: suggested_help_category
     -
@@ -121,12 +121,12 @@ fitness:
       answers:
         - title: Information and advice that I can look at myself
           value: myself
-        - title: Gadgets and equipment
+        - title: Gadgets and equipment that I can buy
           value: equipment
-        - title: I want to see what type of professional help I could get with this
-          value: professional
-        - title: I want to find out about local support
-          value: activities_and_groups
+        - title: Local support and services that I can contact
+          value: local_services
+        - title: Help with payment that I might be eligible for
+          value: payment
         - title: Something else
           value: something_else
           suggested: suggested_info_type
