@@ -4,7 +4,7 @@
 - @welcome_page.fragments.each do |fragment|
 	= fragment.content.html_safe
 
-%p=link_to 'Get started', journeys_path, role: :button, draggable: false, class: 'govuk-button govuk-button--start'
+%p=link_to 'Get started', journeys_path, method: :get, role: :button, draggable: false, class: 'govuk-button govuk-button--start'
 
 %hr
 
