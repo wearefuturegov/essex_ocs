@@ -11,7 +11,7 @@ class ResponsesController < ApplicationController
     if params[:next_step].present? && @response.category != 'not_sure' && @response.help_category != ["something_else"]
       redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
     else
-      render :show
+      render 'no_information'
     end
   end
 
