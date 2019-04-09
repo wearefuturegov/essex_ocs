@@ -8,10 +8,10 @@ class ResponsesController < ApplicationController
   def create
     @response = Response.create(response_params)
     session[:response_id] = @response.id
-    if params[:next_step].present? && @response.category != 'not_sure' && @response.help_category != ["something_else"]
-      redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
-    else
+    if @response.category == 'not_sure'
       render 'no_information'
+    elsif params[:next_step].present?
+      redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
     end
   end
 
@@ -19,18 +19,18 @@ class ResponsesController < ApplicationController
     @response = Response.find(params[:id])
     @response.update(response_params)
 
-    if Comfy::Cms::Site.first
+    if @response.help_category == ["something_else"]
+      render 'no_information'
+    elsif params[:next_step].present?
+      redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
+    else
       @results = Comfy::Cms::Site.first.pages.first.children
       @help_category_results = @results.where(slug: @response["help_category"])
       @info_types = @response["info_type"].dup
       @info_types.delete("something_else")
-    end
-
-    if params[:next_step].present? && @response.category != 'not_sure' && @response.help_category != ["something_else"]
-      redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
-    else
       render :show
     end
+
   end
 
   def show
