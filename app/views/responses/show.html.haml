@@ -13,16 +13,7 @@
           You were also interested in '#{@response.suggested_info_type}'
 
 
-    - @help_category_results.each do |help_category_result|
-      .single_category{id: help_category_result.label.parameterize }
-        .single-result
-          %h2.govuk-heading-l
-            = help_category_result.label
-          %p.govuk-body
-            - help_category_result.fragments.each do |fragment|
-              %p.govuk-body
-                = fragment.content.html_safe
-          = link_to "Find out more", help_category_result_response_path(@response.id, help_category_result.slug), class: "govuk-button"
+    = render partial: 'recommendations_top_level'
     %br
 
     = render partial: 'save_for_later'

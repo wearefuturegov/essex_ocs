@@ -46,6 +46,7 @@ class ResponsesController < ApplicationController
   def help_category_result
     get_results
     @help_category_result = @results.where(slug: params[:help_category_result]).first
+    @top_level_help_category_results = @help_category_results.where.not(id: @help_category_result.id)
   end
 
   def send_results_sms
@@ -76,5 +77,6 @@ class ResponsesController < ApplicationController
   def get_results
     @results = Comfy::Cms::Site.first.pages.first.children
     @help_category_results = @results.where(slug: @response["help_category"])
+    @top_level_help_category_results = @help_category_results
   end
 end
