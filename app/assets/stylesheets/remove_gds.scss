@@ -5,6 +5,17 @@ $brand: #682558;
     color: darken($brand, 10);
   }
 }
+.govuk-header__logotype-text {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.essex-logo {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
 footer {
   display: none;
 }
@@ -79,10 +90,6 @@ a.govuk-button {
   border-radius: 10px;
 }
 
-.essex-logo {
-  width: 30px;
-}
-
 .hidden_field, .display_none {
   display: none;
 }
@@ -121,7 +128,7 @@ a.govuk-button {
 .govuk-caption-l {
   line-height: 1.4;
 }
-.govuk-fieldset__legend--xl {
+.govuk-fieldset__legend--xl, .govuk-fieldset__heading {
   font-size: 28px;
   line-height: 35px;
 }
@@ -131,7 +138,7 @@ a.govuk-button {
     font-size: 22px;
     line-height: 28px;
   }
-  .govuk-fieldset__legend--xl {
+  .govuk-fieldset__legend--xl, .govuk-fieldset__heading {
     font-size: 31px;
     line-height: 40px;
   }

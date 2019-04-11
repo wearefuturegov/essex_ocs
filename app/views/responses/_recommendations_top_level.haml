@@ -1,7 +1,7 @@
 - @top_level_help_category_results.each do |help_category_result|
   .single_category{id: help_category_result.label.parameterize }
     .single-result
-      %h2.govuk-heading-l
+      %h2.govuk-heading-m
         = help_category_result.label
       %p.govuk-body
         - help_category_result.fragments.each do |fragment|
