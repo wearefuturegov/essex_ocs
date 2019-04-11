@@ -104,3 +104,25 @@ footer {
 .govuk-form-group.hidden {
   display: none;
 }
+.govuk-body-m, .govuk-body, .govuk-radios__item, .govuk-caption-l, .govuk-label--s, .govuk-button, .govuk-checkboxes__label, .govuk-hint {
+  font-size: 19px;
+  line-height: 25px;
+}
+.govuk-caption-l {
+  line-height: 1.4;
+}
+.govuk-fieldset__legend--xl {
+  font-size: 28px;
+  line-height: 35px;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-body-m, .govuk-body, .govuk-radios__item, .govuk-caption-l, .govuk-label--s, .govuk-button, .govuk-checkboxes__label, .govuk-hint {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .govuk-fieldset__legend--xl {
+    font-size: 31px;
+    line-height: 40px;
+  }
+}
