@@ -14,21 +14,9 @@
 
 
     = render partial: 'recommendations_top_level'
-    %br
 
-    = render partial: 'save_for_later'
-
-    %br
-    %h2.govuk-heading-m
-      Need to speak to someone?
-    %p
-      If you feel like you are having difficulties with the Home and Healthy service or just feel like you need to talk to someone you can contact the Navigator service on:
-      =link_to "0333 777 8087", "tel:0333 777 8087"
-    /   = @results.where(slug: 'more_help_generic').first.label
-    / - @results.where(slug: 'more_help_generic').first.fragments.each do |fragement|
-    /   = fragement.content.html_safe
+    .save_for_later
+      = render partial: 'save_for_later'
 
 #toTop
   To the top
-
-= link_to "Answer questions again", journeys_path, class: "govuk-button"

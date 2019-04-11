@@ -20,12 +20,10 @@
     - @help_category_result.children.order(:position).where(slug: @response["info_type"]).each do |info_type|
       = render partial: 'info_type_result', locals: {info_type: info_type}
 
-- if @help_category_results.size > 1
-  .save_for_later
-    %p context blah blah blah
-    = link_to "Answer questions again", journeys_path, class: "govuk-button"
-- else
-  = render partial: 'save_for_later'
+.save_for_later
+  - if @help_category_results.size == 1
+    = render partial: 'save_for_later'
+  = render partial: 'start_again'
 
 #toTop
   To the top
