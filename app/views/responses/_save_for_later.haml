@@ -1,0 +1,14 @@
+.save_for_later
+  %h2.govuk-heading-m
+    Want to save this for later?
+  Type your phone number in the box below and we'll send you a link to these results
+  %span.govuk-hint
+    We won't use this information for anything else.
+  #validate_mobile
+    .form_errors.display_none
+      %h4 Please check your phone number is correct
+    = form_for @response, url: response_send_results_sms_path(@response.id), method: :patch do |f|
+      .govuk-form-group
+        = f.telephone_field :phone_number, class: 'govuk-input govuk-input--width-10 '
+      .govuk-form-group
+        = f.submit "Send", class: 'govuk-button no-margin'

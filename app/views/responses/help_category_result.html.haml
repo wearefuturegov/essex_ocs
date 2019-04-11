@@ -1,4 +1,5 @@
-= link_to "Back to results list", response_path(@response)
+- if @help_category_results.size > 1
+  = link_to "Back to your recommendations", response_path(@response), class: "govuk-button"
 
 %h2.govuk-heading-l
   = @help_category_result.label
@@ -12,3 +13,7 @@
   - else # Otherwise just render relevant info.
     - @help_category_result.children.order(:position).where(slug: @response["info_type"]).each do |info_type|
       = render partial: 'info_type_result', locals: {info_type: info_type}
+
+= render partial: 'save_for_later'
+
+= link_to "Answer questions again", journeys_path, class: "govuk-button"

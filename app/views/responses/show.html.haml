@@ -2,11 +2,11 @@
   - if @help_category_results.size > 0
     %h1.govuk-heading-xl
       Your recommendations
-    %p
-      We have found some information and services that might be useful for you. We're still learning, so please let us know at the end whether this information was helpful.
     #contents
       - if @response.info_type == ['something_else']
-        %p We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices.
+        %p We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices. We're still learning, so please let us know at the end whether this information was helpful.
+      -else
+        %p We have found some information and services that might be useful for you. We're still learning, so please let us know at the end whether this information was helpful.
 
       - if @response.info_type.include? 'something_else' && @response.suggested_info_type
         %p.govuk-info
@@ -22,25 +22,14 @@
             - help_category_result.fragments.each do |fragment|
               %p.govuk-body
                 = fragment.content.html_safe
-          = link_to "Find out more", response_help_category_result_path(@response, help_category_result.slug)
+          = link_to "Find out more", help_category_result_response_path(@response.id, help_category_result.slug), class: "govuk-button"
 
       - unless help_category_result == @help_category_results.last
         / %hr
+    %br
 
-    .save_for_later
-      %h2.govuk-heading-m
-        Want to save this for later?
-      Type your phone number in the box below and we'll send you a link to these results
-      %span.govuk-hint
-        We won't use this information for anything else.
-      #validate_mobile
-        .form_errors.display_none
-          %h4 Please check your phone number is correct
-        = form_for @response, url: response_send_results_sms_path(@response.id), method: :patch do |f|
-          .govuk-form-group
-            = f.telephone_field :phone_number, class: 'govuk-input govuk-input--width-10 '
-          .govuk-form-group
-            = f.submit "Send", class: 'govuk-button no-margin'
+    = render partial: 'save_for_later'
+
     %br
     %h2.govuk-heading-m
       Need to speak to someone?
@@ -53,3 +42,5 @@
 
 #toTop
   To the top
+
+= link_to "Answer questions again", journeys_path, class: "govuk-button"
