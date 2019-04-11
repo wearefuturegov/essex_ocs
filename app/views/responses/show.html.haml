@@ -8,31 +8,6 @@
       - if @response.info_type == ['something_else']
         %p We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices.
 
-      %span.govuk-body-l
-        %strong
-          Contents:
-      %ul
-        - @help_category_results.each do |help_category_result|
-          %li.bold
-            %a{href: '#' + help_category_result.label.parameterize }= help_category_result.label
-            %ul
-              - @info_types.each do |info_type|
-                %li
-                  %a{href: '#' + help_category_result.label.parameterize + '_' + @help_category_results.first.children.where(slug: info_type).first.label.parameterize }
-                    = @help_category_results.first.children.where(slug: info_type).first.label
-              - if @response.info_type == ['something_else']
-                - help_category_result.children.each do |info_type|
-                  - unless info_type.slug == 'more_help'
-                    %li
-                      %a{href: '#' + help_category_result.label.parameterize + '_' + info_type.label.parameterize }
-                        = info_type.label
-
-        - if @response.help_category.include? 'something_else' && @response.suggested_help_category
-          %li.govuk-info
-            You also were interested in '#{@response.suggested_help_category}'
-
-
-
       - if @response.info_type.include? 'something_else' && @response.suggested_info_type
         %p.govuk-info
           You were also interested in '#{@response.suggested_info_type}'
