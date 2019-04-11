@@ -49,6 +49,11 @@ footer {
     margin-top: 0;
   }
 }
+a.govuk-button {
+  &:hover {
+    color: #fff;
+  }
+}
 .govuk-button--start:hover {
   color: #fff !important;
 }
