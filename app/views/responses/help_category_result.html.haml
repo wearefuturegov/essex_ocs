@@ -20,6 +20,8 @@
     - @help_category_result.children.order(:position).where(slug: @response["info_type"]).each do |info_type|
       = render partial: 'info_type_result', locals: {info_type: info_type}
 
+= render partial: 'recommendations_top_level'
+
 .save_for_later
   - if @help_category_results.size == 1
     = render partial: 'save_for_later'
