@@ -23,9 +23,6 @@
               %p.govuk-body
                 = fragment.content.html_safe
           = link_to "Find out more", help_category_result_response_path(@response.id, help_category_result.slug), class: "govuk-button"
-
-      - unless help_category_result == @help_category_results.last
-        / %hr
     %br
 
     = render partial: 'save_for_later'
