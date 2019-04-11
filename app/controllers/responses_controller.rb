@@ -1,5 +1,5 @@
 class ResponsesController < ApplicationController
-  before_action :get_response, only: %i[update show]
+  before_action :get_response, only: %i[update show help_category_result]
 
   def new
     @response = Response.new
@@ -24,25 +24,27 @@ class ResponsesController < ApplicationController
     elsif params[:next_step].present?
       redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
     else
-      @results = Comfy::Cms::Site.first.pages.first.children
-      @help_category_results = @results.where(slug: @response["help_category"])
-      @info_types = @response["info_type"].dup
-      @info_types.delete("something_else")
-      render :show
+      get_results
+      if @help_category_results.size == 1
+        @help_category_result = @help_category_results.first
+        render 'help_category_result'
+      else
+        render :show
+      end
     end
 
   end
 
   def show
-    @results = Comfy::Cms::Site.first.pages.first.children
-    @help_category_results = @results.where(slug: @response["help_category"])
-    @info_types = @response["info_type"].dup
-    @info_types.delete("something_else")
+    get_results
+    if @help_category_results.size == 1
+      @help_category_result = @help_category_results.first
+      render 'help_category_result'
+    end
   end
 
   def help_category_result
-    @response = Response.find(params[:response_id])
-    @results = Comfy::Cms::Site.first.pages.first.children
+    get_results
     @help_category_result = @results.where(slug: params[:help_category_result]).first
   end
 
@@ -69,5 +71,10 @@ class ResponsesController < ApplicationController
   
   def get_response
     @response = Response.find(params[:id])
+  end
+
+  def get_results
+    @results = Comfy::Cms::Site.first.pages.first.children
+    @help_category_results = @results.where(slug: @response["help_category"])
   end
 end
