@@ -3,12 +3,13 @@
 
 %h2.govuk-heading-l
   = @help_category_result.label
-
+- @help_category_result.fragments.each do |fragment|
+  %p.govuk-body
+    = fragment.content.html_safe
 #results-list
   - if @response.info_type == ['something_else'] # If info type is just something else then render all info
     - @help_category_result.children.each do |info_type|
       = render partial: 'info_type_result', locals: {info_type: info_type}
-
 
   - else # Otherwise just render relevant info.
     - @help_category_result.children.order(:position).where(slug: @response["info_type"]).each do |info_type|
