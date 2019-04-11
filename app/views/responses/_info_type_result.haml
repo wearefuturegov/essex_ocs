@@ -1,0 +1,7 @@
+.single-result{id: @help_category_result.label.parameterize + '_' + info_type.label.parameterize }
+  .result-title
+    %h2.govuk-heading-m
+      = info_type.label
+  .result-content
+    - info_type.fragments.each do |fragment|
+      = fragment.content.html_safe

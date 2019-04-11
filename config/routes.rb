@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :responses, only: %i[new create update show] do
     patch :send_results_sms
+    get '/:help_category_result', to: 'responses#help_category_result', as: 'help_category_result'
   end
 
   comfy_route :cms_admin, path: "/admin"

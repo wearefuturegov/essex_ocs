@@ -47,26 +47,7 @@
             - help_category_result.fragments.each do |fragment|
               %p.govuk-body
                 = fragment.content.html_safe
-        #results-list
-          - if @response.info_type == ['something_else']
-            - help_category_result.children.each do |info_type|
-              - unless info_type.slug == 'more_help'
-                .single-result{id: help_category_result.label.parameterize + '_' + info_type.label.parameterize }
-                  .result-title
-                    %h2.govuk-heading-m
-                      = info_type.label
-                  .result-content
-                    - info_type.fragments.each do |fragment|
-                      = fragment.content.html_safe
-          - else
-            - help_category_result.children.order(:position).where(slug: @response["info_type"]).each do |info_type|
-              .single-result{id: help_category_result.label.parameterize + '_' + info_type.label.parameterize }
-                .result-title
-                  %h2.govuk-heading-m
-                    = info_type.label
-                .result-content
-                  - info_type.fragments.each do |fragment|
-                    = fragment.content.html_safe
+          = link_to "Find out more", response_help_category_result_path(@response, help_category_result.slug)
 
       - unless help_category_result == @help_category_results.last
         / %hr

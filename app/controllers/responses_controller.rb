@@ -40,6 +40,12 @@ class ResponsesController < ApplicationController
     @info_types.delete("something_else")
   end
 
+  def help_category_result
+    @response = Response.find(params[:response_id])
+    @results = Comfy::Cms::Site.first.pages.first.children
+    @help_category_result = @results.where(slug: params[:help_category_result]).first
+  end
+
   def send_results_sms
     @response = Response.find(params[:response_id])
     @response.update(response_params)
