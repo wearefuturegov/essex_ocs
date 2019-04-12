@@ -19,7 +19,10 @@ class ResponsesController < ApplicationController
     @response = Response.find(params[:id])
     @response.update(response_params)
 
-    if @response.help_category == ["something_else"]
+    if (@response.help_category == ["something_else"]) || (@response.category == 'not_sure')
+      if params[:next_step].to_i > 1
+        @previous_step = params[:next_step].to_i - 1
+      end
       render 'no_information'
     elsif params[:next_step].present?
       redirect_to journey_step_path(id: params[:next_step], journey_id: @response.category)
