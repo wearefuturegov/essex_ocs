@@ -7,4 +7,4 @@
         - help_category_result.fragments.each do |fragment|
           %p.govuk-body
             = fragment.content.html_safe
-      = link_to "Find out more", help_category_result_response_path(@response.id, help_category_result.slug), class: "govuk-button"
+      = link_to "Find out more", help_category_result_response_path(@response.id, help_category_result.slug), class: "govuk-button raise_higher"
