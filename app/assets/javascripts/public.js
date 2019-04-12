@@ -21,6 +21,11 @@ $(function() {
   });
 });
 
+$( document ).on('turbolinks:load', function() {
+  $('.display_hidden_radio').each(function() { $(this).displayHiddenRadio() });
+  $('.display_hidden_checkbox').each(function() { $(this).displayHiddenCheckbox() });
+})
+
 
 $(window).scroll(function() {
   if ($(this).scrollTop()) {
