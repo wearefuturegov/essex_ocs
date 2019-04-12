@@ -78,5 +78,6 @@ class ResponsesController < ApplicationController
     @results = Comfy::Cms::Site.first.pages.first.children
     @help_category_results = @results.where(slug: @response["help_category"])
     @top_level_help_category_results = @help_category_results
+    @previous_step = 2
   end
 end
