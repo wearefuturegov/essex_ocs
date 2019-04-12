@@ -24,7 +24,9 @@
               - if a['value'] == 'something_else'
                 .hidden_field
                   %br
-                  = f.text_field a['suggested'], class: 'govuk-input govuk-input--width-20 hidden_field', placeholder: " tell us what you're looking for"
+                  %div.bold Tell us what you are looking for
+                  %div.govuk-hint Please let us know what's missing, so we can improve the service in the future
+                  = f.text_field a['suggested'], class: 'govuk-input govuk-input--width-20 hidden_field', placeholder: "Tell us what you're looking for"
 
         %p
           - if @next_step.present?

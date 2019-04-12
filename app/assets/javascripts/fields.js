@@ -1,5 +1,10 @@
 $.fn.displayHiddenRadio = function() {
   var displayInput = this;
+  if (displayInput.is(':checked')) {
+    $('.hidden_field').show();
+  } else {
+    $('.hidden_field').hide().val('');
+  }
   $("input:radio").change(function () {
     if (displayInput.is(':checked')) {
       $('.hidden_field').show();
@@ -11,6 +16,11 @@ $.fn.displayHiddenRadio = function() {
 
 $.fn.displayHiddenCheckbox = function() {
   var displayInput = this;
+  if (displayInput.is(':checked')) {
+    $('.hidden_field').show();
+  } else {
+    $('.hidden_field').hide().val('');
+  }
   displayInput.change(function () {
     if (displayInput.is(':checked')) {
       $('.hidden_field').show();
