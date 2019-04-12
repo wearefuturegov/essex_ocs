@@ -157,5 +157,13 @@ a.govuk-button {
 }
 #banner {
   padding: 5px 10px;
-  background: black;
+  background: darken($brand, 17%);
+}
+
+.govuk-phase-banner__content {
+  color: #fff;
+  margin-bottom: 0 auto;
+  .govuk-phase-banner__content__tag {
+    background-color: $brand;
+  }
 }
