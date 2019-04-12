@@ -157,7 +157,7 @@ a.govuk-button {
 }
 #banner {
   padding: 5px 10px;
-  background: darken($brand, 17%);
+  background: darken($brand, 25%);
 }
 
 .govuk-phase-banner__content {
@@ -166,4 +166,7 @@ a.govuk-button {
   .govuk-phase-banner__content__tag {
     background-color: $brand;
   }
+}
+.govuk-back-link {
+  margin-top: 0;
 }
