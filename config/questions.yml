@@ -3,7 +3,7 @@ staying_independent:
   hint: Technology, tips and alterations to make it easier for you to stay at home
   steps:
     -
-      title: Thank you - you chose staying independent. Now please choose any of these things you might be interested in (you can choose more than one)
+      title: Thank you - you chose staying at home. Now please choose any of these things you might be interested in (you can choose more than one)
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -21,7 +21,7 @@ staying_independent:
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: Information and advice that I can look at myself
+        - title: Tips and advice that I can look at myself
           value: myself
         - title: Gadgets and equipment that I can buy
           value: equipment
@@ -55,7 +55,7 @@ everyday_tasks:
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: Information and advice that I can look at myself
+        - title: Tips and advice that I can look at myself
           value: myself
         - title: Gadgets and equipment that I can buy
           value: equipment
@@ -87,7 +87,7 @@ out_and_about:
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: Information and advice that I can look at myself
+        - title: Tips and advice that I can look at myself
           value: myself
         - title: Gadgets and equipment that I can buy
           value: equipment
@@ -103,7 +103,7 @@ fitness:
   hint: Activities to keep healthy and lift your mood
   steps:
     -
-      title: Thank you - you chose keeping mentally and physically well. Now please choose any of these things you might be interested in (you can choose more than one)
+      title: Thank you - you chose keeping mentally and physically fit. Now please choose any of these things you might be interested in (you can choose more than one)
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -119,7 +119,7 @@ fitness:
       hint: Again, you can choose as many as you like
       name: info_type
       answers:
-        - title: Information and advice that I can look at myself
+        - title: Tips and advice that I can look at myself
           value: myself
         - title: Gadgets and equipment that I can buy
           value: equipment
