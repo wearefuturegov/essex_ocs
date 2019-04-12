@@ -17,7 +17,7 @@ staying_independent:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for?.
+      title: Thank you. And finally - what would you like to look for?
       hint: Again, you can choose more than one
       name: info_type
       answers:
@@ -51,7 +51,7 @@ everyday_tasks:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for?.
+      title: Thank you. And finally - what would you like to look for?
       hint: Again, you can choose more than one
       name: info_type
       answers:
@@ -83,7 +83,7 @@ out_and_about:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for?.
+      title: Thank you. And finally - what would you like to look for?
       hint: Again, you can choose more than one
       name: info_type
       answers:
@@ -115,7 +115,7 @@ fitness:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for?.
+      title: Thank you. And finally - what would you like to look for?
       hint: Again, you can choose more than one
       name: info_type
       answers:
@@ -132,4 +132,4 @@ fitness:
           suggested: suggested_info_type
 not_sure:
   title: None of these
-  hint: If there’s something else you are looking for, please type it in the box below
+  hint: Please let us know what's missing, so we can improve the service in the future
