@@ -7,7 +7,7 @@
 
   %h2.govuk-heading-l
     Your recommendation for
-    = @help_category_result.label
+    = @help_category_result.label.downcase
 
 
 - @help_category_result.fragments.each do |fragment|
