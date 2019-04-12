@@ -10,9 +10,9 @@
       -else
         %p We've found some things that might be useful for you. We're still learning, so please let us know at the end whether this information was helpful.
 
-      - if (@response.info_type.include? 'something_else') && (@response.suggested_info_type.present?)
-        %p.govuk-info
-          You were also interested in '#{@response.suggested_info_type}'
+      / - if (@response.info_type.include? 'something_else') && (@response.suggested_info_type.present?)
+      /   %p.govuk-info
+      /     You were also interested in '#{@response.suggested_info_type}'
 
 
     = render partial: 'recommendations_top_level'
