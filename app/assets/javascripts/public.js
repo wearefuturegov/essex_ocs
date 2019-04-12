@@ -13,6 +13,7 @@ $(function() {
     if (!$("input[type='radio']:checked").val()) {
       e.preventDefault();
       $('.form_errors').removeClass('display_none');
+      window.scrollTo(0, 0);
       return false;
     } else {
       $('#firstQuestion #new_response').submit();
