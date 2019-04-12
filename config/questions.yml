@@ -3,7 +3,7 @@ staying_independent:
   hint: Technology, tips and alterations to make it easier for you to stay at home
   steps:
     -
-      title: Thank you - you chose staying at home. Now please choose any of these things you might be interested in (you can choose more than one)
+      title: Thank you - you chose staying at home. Now please choose any of these things you might be interested in.
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -17,8 +17,8 @@ staying_independent:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for? (again, you can choose more than one)
-      hint: Again, you can choose as many as you like
+      title: Thank you. And finally - what would you like to look for?.
+      hint: Again, you can choose more than one
       name: info_type
       answers:
         - title: Tips and advice that I can look at myself
@@ -37,7 +37,7 @@ everyday_tasks:
   hint: Information, equipment and services to help you every day
   steps:
     -
-      title: Thank you - you chose help with everyday tasks. Now please choose any of these things you might be interested in (you can choose more than one)
+      title: Thank you - you chose help with everyday tasks. Now please choose any of these things you might be interested in.
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -51,8 +51,8 @@ everyday_tasks:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for? (again, you can choose more than one)
-      hint: Again, you can choose as many as you like
+      title: Thank you. And finally - what would you like to look for?.
+      hint: Again, you can choose more than one
       name: info_type
       answers:
         - title: Tips and advice that I can look at myself
@@ -71,7 +71,7 @@ out_and_about:
   hint: From mobility aids to transportation - how to keep mobile
   steps:
     -
-      title: Thank you - you chose getting out and about. Now please choose any of these things you might be interested in (you can choose more than one)
+      title: Thank you - you chose getting out and about. Now please choose any of these things you might be interested in.
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -83,8 +83,8 @@ out_and_about:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for? (again, you can choose more than one)
-      hint: Again, you can choose as many as you like
+      title: Thank you. And finally - what would you like to look for?.
+      hint: Again, you can choose more than one
       name: info_type
       answers:
         - title: Tips and advice that I can look at myself
@@ -103,7 +103,7 @@ fitness:
   hint: Activities to keep healthy and lift your mood
   steps:
     -
-      title: Thank you - you chose keeping mentally and physically fit. Now please choose any of these things you might be interested in (you can choose more than one)
+      title: Thank you - you chose keeping mentally and physically fit. Now please choose any of these things you might be interested in.
       hint: You can choose more than one
       name: 'help_category'
       answers:
@@ -115,8 +115,8 @@ fitness:
           value: something_else
           suggested: suggested_help_category
     -
-      title: Thank you. And finally - what would you like to look for? (again, you can choose more than one)
-      hint: Again, you can choose as many as you like
+      title: Thank you. And finally - what would you like to look for?.
+      hint: Again, you can choose more than one
       name: info_type
       answers:
         - title: Tips and advice that I can look at myself

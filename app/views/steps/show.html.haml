@@ -12,7 +12,7 @@
       %fieldset.govuk-fieldset{"aria-describedby" => "#{@name}-hint"}
         %legend.govuk-fieldset__legend.govuk-fieldset__legend--xl
           %h1.govuk-fieldset__heading= @title
-        %span.govuk-hint{id: "#{@name}-hint"}=# @hint
+        %span.govuk-hint{id: "#{@name}-hint"}= @hint
         .form_errors.display_none
           %h4 Please select at least one option to continue
 
