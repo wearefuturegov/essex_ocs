@@ -133,7 +133,31 @@ a.govuk-button {
   line-height: 35px;
 }
 
+#banner {
+  padding: 8px 10px 5px 10px;
+  background: darken($brand, 25%);
+}
+
+.govuk-phase-banner__content {
+  color: #fff;
+  margin-bottom: 0 auto;
+  .govuk-phase-banner__content__tag {
+    background-color: $brand;
+    display: none;
+  }
+  a, a:visited {
+    color: #4c91ff;
+  }
+}
+.govuk-back-link {
+  margin-top: 0;
+}
+
+
 @media (min-width: 40.0625em) {
+  #banner {
+    padding: 5px 10px 5px 10px;
+  }
   .govuk-body-m, .govuk-body, .govuk-radios__item, .govuk-caption-l, .govuk-label--s, .govuk-button, .govuk-checkboxes__label, .govuk-hint {
     font-size: 22px;
     line-height: 28px;
@@ -154,19 +178,9 @@ a.govuk-button {
       margin-bottom: 15px;
     }
   }
-}
-#banner {
-  padding: 5px 10px;
-  background: darken($brand, 25%);
-}
-
-.govuk-phase-banner__content {
-  color: #fff;
-  margin-bottom: 0 auto;
-  .govuk-phase-banner__content__tag {
-    background-color: $brand;
+  .govuk-phase-banner__content {
+    .govuk-phase-banner__content__tag {
+      display: inline-block;
+    }
   }
-}
-.govuk-back-link {
-  margin-top: 0;
 }
