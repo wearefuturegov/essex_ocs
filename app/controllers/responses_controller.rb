@@ -40,6 +40,7 @@ class ResponsesController < ApplicationController
 
   def show
     get_results
+
     if @help_category_results.size == 1
       @help_category_result = @help_category_results.first
       render 'help_category_result'
