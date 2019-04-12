@@ -1,8 +1,8 @@
 %div{:id => "stepQuestion_#{@current_step}"}
   - if @previous_step
-    = link_to 'Back', journey_step_path(id: @previous_step, journey_id: params[:journey_id]), class: 'govuk-back-link'
+    = link_to 'Back to previous question', journey_step_path(id: @previous_step, journey_id: params[:journey_id]), class: 'govuk-back-link'
   - else
-    = link_to 'Back', journeys_path(response_id: @response.id), class: 'govuk-back-link'
+    = link_to 'Back to first question', journeys_path(response_id: @response.id), class: 'govuk-back-link'
 
   %span.govuk-caption-l
     = "Step #{@current_step} of #{@step_count}"
