@@ -6,9 +6,9 @@
       Your recommendations
     #contents
       - if @response.info_type == ['something_else']
-        %p We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices. We're still learning, so please let us know at the end whether this information was helpful.
+        %p We're sorry we don't have the type of information that you’re looking for. Here’s all the information that we do have for your choices. We're still learning, so please let us know whether this information was helpful when providing feedback.
       -else
-        %p We've found some things that might be useful for you. We're still learning, so please let us know at the end whether this information was helpful.
+        %p We've found some things that might be useful for you. We're still learning, so please let us know whether this information was helpful when providing feedback.
 
       / - if (@response.info_type.include? 'something_else') && (@response.suggested_info_type.present?)
       /   %p.govuk-info
