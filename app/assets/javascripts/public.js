@@ -7,13 +7,13 @@ $(function() {
   $('#stepQuestion_3').blankValidation('checkbox');
   $('#validate_mobile').blankValidation('tel');
   $("#toTop").click(function() {
-    $("html, body").animate({scrollTop: 0}, 750);
+    scrollToTop();
   });
   $('#firstQuestion #new_response').on('submit', function(e) {
     if (!$("input[type='radio']:checked").val()) {
       e.preventDefault();
       $('.form_errors').removeClass('display_none');
-      window.scrollTo(0, 0);
+      scrollToTop();
       return false;
     } else {
       $('#firstQuestion #new_response').submit();
@@ -35,4 +35,7 @@ $(window).scroll(function() {
   }
 });
 
+function scrollToTop() {
+  $("html, body").animate({scrollTop: $(window).height()}, 750);
+};
 
