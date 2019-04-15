@@ -145,7 +145,6 @@ a.govuk-button {
   margin-bottom: 0 auto;
   .govuk-phase-banner__content__tag {
     background-color: $brand;
-    display: none;
   }
   a, a:visited {
     color: #4c91ff;
@@ -153,6 +152,14 @@ a.govuk-button {
 }
 .govuk-back-link {
   margin-top: 0;
+}
+@media (max-width: 40.0625em) {
+  .govuk-phase-banner__content {
+    .govuk-phase-banner__content__tag {
+      height: 29px;
+      padding-top: 14px;
+    }
+  }
 }
 
 
