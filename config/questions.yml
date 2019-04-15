@@ -4,7 +4,7 @@ staying_independent:
   steps:
     -
       title: Thank you - you chose staying at home. Now please choose any of these things you might be interested in.
-      hint: You can choose more than one
+      hint: You can now choose more than one
       name: 'help_category'
       answers:
         - title: Avoiding accidents at home
@@ -38,7 +38,7 @@ everyday_tasks:
   steps:
     -
       title: Thank you - you chose help with everyday tasks. Now please choose any of these things you might be interested in.
-      hint: You can choose more than one
+      hint: You can now choose more than one
       name: 'help_category'
       answers:
         - title: Help with cleaning, housework or personal care (like washing and dressing)
@@ -72,7 +72,7 @@ out_and_about:
   steps:
     -
       title: Thank you - you chose getting out and about. Now please choose any of these things you might be interested in.
-      hint: You can choose more than one
+      hint: You can now choose more than one
       name: 'help_category'
       answers:
         - title: Wheelchairs and mobility aids
@@ -104,7 +104,7 @@ fitness:
   steps:
     -
       title: Thank you - you chose keeping mentally and physically fit. Now please choose any of these things you might be interested in.
-      hint: You can choose more than one
+      hint: You can now choose more than one
       name: 'help_category'
       answers:
         - title: Ways to keep active
