@@ -19,6 +19,9 @@ $(function() {
       $('#firstQuestion #new_response').submit();
     }
   });
+  $('.govuk-radios__input').change(function(){
+    $("html, body").animate({scrollTop: $(window).height()}, 750);
+  });
 });
 
 $( document ).on('turbolinks:load', function() {
