@@ -27,9 +27,11 @@
     %h2.govuk-heading-l Your other recommendations
     = render partial: 'recommendations_top_level'
 
-.save_for_later
-  - if @help_category_results.size == 1
+- if @help_category_results.size == 1
+  .save_for_later
     = render partial: 'save_for_later'
+
+.save_for_later
   = render partial: 'start_again'
 
 #toTop
