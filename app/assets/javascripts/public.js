@@ -39,6 +39,6 @@ $(window).scroll(function() {
 });
 
 function scrollToTop() {
-  $("html, body").animate({scrollTop: $(window).height()}, 750);
+  $("html, body").animate({scrollTop: 0}, 750);
 };
 
