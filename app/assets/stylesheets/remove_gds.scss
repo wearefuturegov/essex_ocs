@@ -153,11 +153,17 @@ a.govuk-button {
 .govuk-back-link {
   margin-top: 0;
 }
-@media (max-width: 40.0625em) {
+@media (max-width: 40.0624em) {
   .govuk-phase-banner__content {
     .govuk-phase-banner__content__tag {
-      height: 29px;
-      padding-top: 14px;
+      padding: 6px;
+      padding-bottom: 4px;
+      margin-top: -2px;
+    }
+    .govuk-phase-banner__text {
+      display: inline-block;
+      width: 70%;
+      vertical-align: middle;
     }
   }
 }
