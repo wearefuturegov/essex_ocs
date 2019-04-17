@@ -124,8 +124,11 @@ a.govuk-button {
   display: none;
 }
 .govuk-body-m, .govuk-body, .govuk-radios__item, .govuk-caption-l, .govuk-label--s, .govuk-button, .govuk-checkboxes__label, .govuk-hint {
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 17px;
+  line-height: 24px;
+}
+.govuk-hint.more_than_one {
+  font-size: 20px;
 }
 .govuk-caption-l {
   line-height: 1.4;
@@ -176,6 +179,9 @@ a.govuk-button {
   .govuk-body-m, .govuk-body, .govuk-radios__item, .govuk-caption-l, .govuk-label--s, .govuk-button, .govuk-checkboxes__label, .govuk-hint {
     font-size: 22px;
     line-height: 28px;
+  }
+  .govuk-hint.more_than_one {
+    font-size: 21px;
   }
   .govuk-fieldset__legend--xl, .govuk-fieldset__heading {
     font-size: 31px;
